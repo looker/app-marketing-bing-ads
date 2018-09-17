@@ -14,13 +14,13 @@ explore: bing_period_fact {
     sql_on:
       ${fact.date_last_period} = ${last_fact.date_period}
       AND ${fact.date_day_of_period} = ${last_fact.date_day_of_period}
-      {% if (ad._in_query or fact.ad_id._in_query) %}
+      {% if (fact.ad_id._in_query) %}
         AND ${fact.ad_id} = ${last_fact.ad_id}
-      {% elsif (keyword._in_query or fact.keyword_id._in_query) %}
+      {% elsif (fact.keyword_id._in_query) %}
         AND ${fact.keyword_id} = ${last_fact.keyword_id}
-      {% elsif (ad_group._in_query or fact.ad_group_id._in_query) or (ad._in_query or fact.ad_id._in_query) or (keyword._in_query or fact.keyword_id._in_query) %}
+      {% elsif (fact.ad_group_id._in_query) or (fact.ad_id._in_query) or (fact.keyword_id._in_query) %}
         AND ${fact.ad_group_id} = ${last_fact.ad_group_id}
-      {% elsif (campaign._in_query or fact.campaign_id._in_query) or (ad_group._in_query or fact.ad_group_id._in_query) or (ad._in_query or fact.ad_id._in_query) or (keyword._in_query or fact.keyword_id._in_query) %}
+      {% elsif (fact.campaign_id._in_query) or (fact.ad_group_id._in_query) or (fact.ad_id._in_query) or (fact.keyword_id._in_query) %}
         AND ${fact.campaign_id} = ${last_fact.campaign_id}
       {% endif %}
       AND ${fact.account_id} = ${last_fact.account_id} ;;
@@ -32,13 +32,13 @@ explore: bing_period_fact {
     sql_on:
       ${fact.date_period} = ${parent_fact.date_period}
       AND ${fact.date_day_of_period} = ${last_fact.date_day_of_period}
-      {% if (ad._in_query or fact.ad_id._in_query) or (keyword._in_query or fact.keyword_id._in_query) %}
+      {% if (fact.ad_id._in_query) or (fact.keyword_id._in_query) %}
         AND ${fact.ad_group_id} = ${parent_fact.ad_group_id}
       {% endif %}
-      {% if (ad_group._in_query or fact.ad_group_id._in_query) or (ad._in_query or fact.ad_id._in_query) or (keyword._in_query or fact.keyword_id._in_query) %}
+      {% if (fact.ad_group_id._in_query) or (fact.ad_id._in_query) or (fact.keyword_id._in_query) %}
         AND ${fact.campaign_id} = ${parent_fact.campaign_id}
       {% endif %}
-      {% if (campaign._in_query or fact.campaign_id._in_query) or (ad_group._in_query or fact.ad_group_id._in_query) or (ad._in_query or fact.ad_id._in_query) or (keyword._in_query or fact.keyword_id._in_query) %}
+      {% if (fact.campaign_id._in_query) or (fact.ad_group_id._in_query) or (fact.ad_id._in_query) or (fact.keyword_id._in_query) %}
         AND ${fact.account_id} = ${parent_fact.account_id}
       {% endif %} ;;
     relationship: many_to_one
@@ -68,13 +68,13 @@ view: bing_period_fact {
   }
 
   sql_table_name:
-  {% if (ad._in_query or fact.ad_id._in_query) %}
+  {% if (fact.ad_id._in_query) %}
     ${ad_date_fact.SQL_TABLE_NAME}
-  {% elsif (keyword._in_query or fact.keyword_id._in_query) %}
+  {% elsif (fact.keyword_id._in_query) %}
     ${keyword_date_fact.SQL_TABLE_NAME}
-  {% elsif (ad_group._in_query or fact.ad_group_id._in_query) %}
+  {% elsif (fact.ad_group_id._in_query) %}
     ${ad_group_date_fact.SQL_TABLE_NAME}
-  {% elsif (campaign._in_query or fact.campaign_id._in_query) %}
+  {% elsif (fact.campaign_id._in_query) %}
     ${campaign_date_fact.SQL_TABLE_NAME}
   {% else %}
     ${account_date_fact.SQL_TABLE_NAME}
@@ -85,15 +85,15 @@ view: bing_period_fact {
     sql:
     CONCAT(
     CAST(${account_id} AS STRING)
-  {% if (campaign._in_query or fact.campaign_id._in_query or ad_group._in_query or fact.ad_group_id._in_query or ad._in_query or fact.ad_id._in_query or keyword._in_query or fact.keyword_id._in_query) %}
+  {% if (fact.campaign_id._in_query or fact.ad_group_id._in_query or fact.ad_id._in_query or fact.keyword_id._in_query) %}
     ,"-", CAST(${campaign_id} AS STRING)
   {% endif %}
-  {% if (ad_group._in_query or fact.ad_group_id._in_query or ad._in_query or fact.ad_id._in_query or keyword._in_query or fact.keyword_id._in_query) %}
+  {% if (fact.ad_group_id._in_query or fact.ad_id._in_query or fact.keyword_id._in_query) %}
     ,"-", CAST(${ad_group_id} AS STRING)
   {% endif %}
-  {% if (ad._in_query or fact.ad_id._in_query) %}
+  {% if (fact.ad_id._in_query) %}
     ,"-", CAST(${ad_id} AS STRING)
-  {% elsif (keyword._in_query or fact.keyword_id._in_query) %}
+  {% elsif (fact.keyword_id._in_query) %}
     ,"-", CAST(${keyword_id} AS STRING)
   {% endif %}
   ) ;;

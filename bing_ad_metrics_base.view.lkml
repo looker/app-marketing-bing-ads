@@ -1,4 +1,4 @@
-view: bing_ad_metrics_base {
+view: bing_ad_metrics_base_template {
   extension: required
   extends: [google_ad_metrics_base]
 

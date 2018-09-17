@@ -1,9 +1,8 @@
 include: "ad_group_fact.view"
-include: "recent_changes.view"
 
 explore: bing_ad_date_fact {
   persist_with: bing_ads_etl_datagroup
-  extends: [bing_ad_group_date_fact]
+  extends: [bing_keyword_date_fact]
   from: bing_ad_date_fact
   view_name: fact
   label: "Ad This Period"

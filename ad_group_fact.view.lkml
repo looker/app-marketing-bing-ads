@@ -1,5 +1,4 @@
 include: "campaign_fact.view"
-include: "recent_changes.view"
 
 explore: bing_ad_group_date_fact {
   persist_with: bing_ads_etl_datagroup
