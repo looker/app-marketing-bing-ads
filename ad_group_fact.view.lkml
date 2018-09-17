@@ -26,23 +26,6 @@ explore: bing_ad_group_date_fact {
       ${fact.date_date} = ${parent_fact.date_date} ;;
     relationship: many_to_one
   }
-  join: ad_group {
-    from: bing_ad_group_adapter
-    view_label: "Ad Group"
-    sql_on: ${fact.ad_group_id} = ${ad_group.ad_group_id} AND
-      ${fact.campaign_id} = ${ad_group.campaign_id} AND
-      ${fact.account_id} = ${ad_group.account_id} AND
-      ${fact._date} = ${ad_group._date}  ;;
-    relationship: many_to_one
-  }
-  join: status_changes {
-    from: bing_status_changes
-    sql_on: ${fact.account_id} = ${status_changes.account_id} AND
-      ${fact.campaign_id} = ${status_changes.campaign_id} AND
-      ${fact.ad_group_id} = ${status_changes.ad_group_id} AND
-      ${fact.date_date} = ${status_changes.date_date} ;;
-    relationship: one_to_many
-  }
 }
 
 view: bing_ad_group_key_base {

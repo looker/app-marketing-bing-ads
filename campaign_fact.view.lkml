@@ -23,21 +23,6 @@ explore: bing_campaign_date_fact {
       ${fact.date_date} = ${parent_fact.date_date};;
     relationship: many_to_one
   }
-  join: campaign {
-    from: bing_campaign_adapter
-    view_label: "Campaign"
-    sql_on: ${fact.account_id} = ${campaign.account_id} AND
-      ${fact.campaign_id} = ${campaign.campaign_id} AND
-      ${fact._date} = ${campaign._date} ;;
-    relationship: many_to_one
-  }
-  join: status_changes {
-    from: bing_status_changes
-    sql_on: ${fact.account_id} = ${status_changes.account_id} AND
-      ${fact.campaign_id} = ${status_changes.campaign_id} AND
-      ${fact.date_date} = ${status_changes.date_date} ;;
-    relationship: one_to_many
-  }
 }
 
 view: bing_campaign_key_base {

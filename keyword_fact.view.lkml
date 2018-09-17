@@ -28,26 +28,6 @@ explore: bing_keyword_date_fact {
               ${fact.date_date} = ${parent_fact.date_date} ;;
     relationship: one_to_one
   }
-  join: keyword {
-    from: bing_keyword_adapter
-    view_label: "Keyword"
-    sql_on: ${fact.account_id} = ${keyword.account_id} AND
-              ${fact.campaign_id} = ${keyword.campaign_id} AND
-              ${fact.ad_group_id} = ${keyword.ad_group_id} AND
-              ${fact.keyword_id} = ${keyword.keyword_id} AND
-              ${fact._date} = ${keyword._date} ;;
-    relationship: many_to_one
-  }
-  join: status_changes {
-    from: bing_status_changes
-    view_label: "Keywords"
-    sql_on: ${fact.account_id} = ${status_changes.account_id} AND
-              ${fact.campaign_id} = ${status_changes.campaign_id} AND
-              ${fact.ad_group_id} = ${status_changes.ad_group_id} AND
-              ${fact.keyword_id} = ${status_changes.keyword_id} AND
-              ${fact.date_date} = ${status_changes.date_date} ;;
-    relationship: one_to_many
-  }
 }
 
 view: bing_keyword_key_base {
