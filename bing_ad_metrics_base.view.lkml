@@ -1,7 +1,10 @@
 view: bing_ad_metrics_base {
+  extension: required
+  extends: [google_ad_metrics_base]
 
-  dimension: assists {
+  dimension: average_position {
     type: number
+    sql: ${TABLE}.average_position ;;
   }
 
   dimension: conversionvalue {

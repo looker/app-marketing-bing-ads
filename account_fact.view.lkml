@@ -46,11 +46,11 @@ view: bing_account_date_fact {
     explore_source: bing_ad_impressions {
       column: _date { field: fact.date_date }
       column: account_id { field: fact.account_id }
-      column: averageposition {field: fact.weighted_average_position}
+      column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
-      column: conversionvalue {field: fact.total_conversionvalue}
-      column: cost {field: fact.total_cost}
+      column: revenue {field: fact.total_conversionvalue}
+      column: spend {field: fact.total_cost}
       column: impressions { field: fact.total_impressions}
     }
   }

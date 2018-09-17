@@ -72,14 +72,14 @@ view: bing_ad_date_fact {
       column: account_id { field: fact.account_id }
       column: campaign_id {field: fact.campaign_id}
       column: ad_group_id {field: fact.ad_group_id}
-      column: criterion_id {field: fact.criterion_id}
-      column: averageposition {field: fact.weighted_average_position}
+      column: keyword_id {field: fact.keyword_id}
+      column: ad_id { field: fact.ad_id }
+      column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
-      column: conversionvalue {field: fact.total_conversionvalue}
-      column: cost {field: fact.total_cost}
+      column: revenue {field: fact.total_conversionvalue}
+      column: spend {field: fact.total_cost}
       column: impressions { field: fact.total_impressions}
-      column: ad_id { field: fact.ad_id }
     }
   }
   dimension: ad_id {
