@@ -42,7 +42,6 @@ view: bing_keyword_key_base {
   }
 }
 
-
 view: bing_keyword_date_fact {
   extends: [bing_keyword_key_base, bing_ad_group_date_fact]
 
@@ -55,6 +54,8 @@ view: bing_keyword_date_fact {
       column: ad_group_id {field: fact.ad_group_id}
       column: keyword_id {field: fact.keyword_id}
       column: keyword {field: fact.keyword}
+      column: bid_strategy_type {field: fact.bid_strategy_type}
+      column: final_url {field: fact.final_url}
       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
@@ -65,6 +66,15 @@ view: bing_keyword_date_fact {
   }
   dimension: keyword_id {
     hidden: yes
+  }
+
+  dimension: keyword {
+  }
+
+  dimension: final_url {
+  }
+
+  dimension: bid_strategy_type {
   }
   set: detail {
     fields: [account_id, campaign_id, ad_group_id, keyword_id]
