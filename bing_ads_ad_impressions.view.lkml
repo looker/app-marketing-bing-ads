@@ -1,6 +1,6 @@
 explore: bing_ads_ad_impressions {
   persist_with: bing_ads_etl_datagroup
-  hidden: no
+  hidden: yes
   from: bing_ads_ad_impressions
   view_name: fact
 }
