@@ -560,7 +560,11 @@
     - last_fact.total_clicks
     - last_fact.total_impressions
     - fact.average_click_rate_period_percent_change
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 17
     col: 0
     width: 12

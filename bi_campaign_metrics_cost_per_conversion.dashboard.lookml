@@ -677,7 +677,11 @@
     - last_fact.total_cost
     - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 17
     col: 8
     width: 8
@@ -796,7 +800,11 @@
     - last_fact.total_cost
     - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 17
     col: 16
     width: 8
