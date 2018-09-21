@@ -473,8 +473,8 @@
     column_limit: 50
     stacking: ''
     colors:
-    - "#a6b7ff"
     - "#7869df"
+    - "#a6b7ff"
     - "#6e98f9"
     - "#8ac8ca"
     - "#d06180"
@@ -495,7 +495,7 @@
     series_colors: {}
     series_labels:
       fact.average_click_rate: This Period
-      last_fact.average_click_rate: Last Period
+      last_fact.average_click_rate: Prior Period
     series_types: {}
     limit_displayed_rows: true
     limit_displayed_rows_values:
@@ -592,8 +592,8 @@
     column_limit: 50
     stacking: ''
     colors:
-    - "#ea9895"
     - "#d06180"
+    - "#ea9895"
     - "#a6b7ff"
     - "#7869df"
     - "#6e98f9"
@@ -614,7 +614,7 @@
     series_colors: {}
     series_labels:
       fact.average_click_rate: This Period
-      last_fact.average_click_rate: Last Period
+      last_fact.average_click_rate: Prior Period
     series_types: {}
     limit_displayed_rows: true
     limit_displayed_rows_values:
