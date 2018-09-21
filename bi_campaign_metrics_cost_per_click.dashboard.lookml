@@ -554,7 +554,7 @@
     row: 17
     col: 0
     width: 8
-    height: 10
+    height: 9
   - title: Keyword Cost Per Click Change
     name: Keyword Cost Per Click Change
     model: marketing_analytics
@@ -660,7 +660,7 @@
     row: 17
     col: 8
     width: 8
-    height: 10
+    height: 9
   - title: Ad Cost Per Click Change
     name: Ad Cost Per Click Change
     model: marketing_analytics
@@ -779,4 +779,4 @@
     row: 17
     col: 16
     width: 8
-    height: 10
+    height: 9
