@@ -1,13 +1,6 @@
 - dashboard: bing_overview
   title: Bing Overview
-  layout: newspaper
-  embed_style:
-    show_title: false
-    show_filters_bar: false
-    background_color: "#ffffff"
-    title_color: "#3a4245"
-    tile_text_color: "#3a4245"
-    text_tile_text_color: ''
+  extends: bing_ads_base
   elements:
   - title: Spend
     name: Spend
@@ -106,6 +99,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 0
     col: 0
     width: 9
@@ -209,6 +203,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 0
     col: 14
     width: 5
@@ -310,6 +305,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 0
     col: 9
     width: 5
@@ -413,6 +409,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 0
     col: 19
     width: 5
@@ -518,6 +515,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 3
     col: 9
     width: 15
@@ -668,6 +666,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 13
     col: 0
     width: 9
@@ -771,6 +770,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 13
     col: 9
     width: 4
@@ -878,6 +878,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 13
     col: 13
     width: 11
@@ -973,6 +974,7 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 19
     col: 0
     width: 24
@@ -1076,38 +1078,8 @@
       Period: fact.period
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 16
     col: 9
     width: 4
     height: 3
-  filters:
-  - name: Period
-    title: Period
-    type: field_filter
-    default_value: 28 day
-    allow_multiple_values: true
-    required: false
-    model: marketing_analytics
-    explore: bing_ad_group_date_fact
-    listens_to_filters: []
-    field: fact.period
-  - name: Period Latest
-    title: Period Latest
-    type: field_filter
-    default_value: 'Yes'
-    allow_multiple_values: true
-    required: false
-    model: marketing_analytics
-    explore: bing_ad_group_date_fact
-    listens_to_filters: []
-    field: fact.date_period_latest
-  - name: Campaign
-    title: Campaign
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    model: marketing_analytics
-    explore: bing_ad_group_date_fact
-    listens_to_filters: []
-    field: fact.campaign_name

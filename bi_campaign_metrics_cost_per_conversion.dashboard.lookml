@@ -1,13 +1,6 @@
 - dashboard: bing_campaign_metrics_cost_per_conversion
   title: Bing Campaign Metrics - Cost Per Conversion
-  layout: newspaper
-  embed_style:
-    background_color: "#ffffff"
-    show_title: false
-    title_color: "#3a4245"
-    show_filters_bar: false
-    tile_text_color: "#3a4245"
-    text_tile_text_color: ''
+  extends: bing_ads_base
   elements:
   - title: Cost Per Conversion By Day Of Week
     name: Cost Per Conversion By Day Of Week
@@ -808,44 +801,3 @@
     col: 16
     width: 8
     height: 9
-  filters:
-  - name: Period
-    title: Period
-    type: field_filter
-    default_value: 28 day
-    allow_multiple_values: true
-    required: false
-    model: marketing_analytics
-    explore: linkedin_ads_ad_impressions
-    listens_to_filters: []
-    field: fact.period
-  - name: Period Latest
-    title: Period Latest
-    type: field_filter
-    default_value: 'Yes'
-    allow_multiple_values: true
-    required: false
-    model: marketing_analytics
-    explore: linkedin_ads_ad_impressions
-    listens_to_filters: []
-    field: fact.date_period_latest
-  - name: Campaign
-    title: Campaign
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    model: marketing_analytics
-    explore: linkedin_ads_ad_impressions
-    listens_to_filters: []
-    field: fact.campaign_name
-  - name: Account
-    title: Account
-    type: field_filter
-    default_value: ''
-    allow_multiple_values: true
-    required: false
-    model: marketing_analytics
-    explore: linkedin_ads_ad_impressions
-    listens_to_filters: []
-    field: fact.account_name
