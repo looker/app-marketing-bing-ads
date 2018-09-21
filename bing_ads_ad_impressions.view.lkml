@@ -37,9 +37,6 @@ view: bing_ads_ad_impressions {
   dimension: account_id {
     hidden: yes
   }
-  dimension: date_day_of_week {
-    hidden: no
-  }
   dimension: campaign_id {
     hidden: yes
   }
