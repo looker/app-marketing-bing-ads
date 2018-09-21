@@ -455,36 +455,18 @@
     model: marketing_analytics
     explore: bing_keyword_date_fact
     type: looker_bar
-    fields:
-    - fact.keyword
-    - last_fact.average_conversion_rate
-    - fact.average_conversion_rate
-    - fact.total_conversions
-    - fact.total_clicks
-    - last_fact.total_conversions
-    - last_fact.total_clicks
-    - fact.average_conversion_rate_period_percent_change
+    fields: [fact.keyword, last_fact.average_conversion_rate, fact.average_conversion_rate,
+      fact.total_conversions, fact.total_clicks, last_fact.total_conversions, last_fact.total_clicks,
+      fact.average_conversion_rate_period_percent_change]
     filters:
       fact.period: 28 day
       fact.date_period_latest: 'Yes'
-    sorts:
-    - fact.average_conversion_rate_period_percent_change desc
+    sorts: [fact.average_conversion_rate_period_percent_change desc]
     limit: 50
     column_limit: 50
     stacking: ''
-    colors:
-    - "#a6b7ff"
-    - "#7869df"
-    - "#6e98f9"
-    - "#8ac8ca"
-    - "#d06180"
-    - "#dc9d4f"
-    - "#4bb86a"
-    - "#a4a6a9"
-    - "#a6b7ff"
-    - "#afe8fd"
-    - "#ea9895"
-    - "#f1e582"
+    colors: ["#a6b7ff", "#7869df", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
+      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
     show_value_labels: true
     label_density: 25
     legend_position: center
@@ -493,10 +475,10 @@
     show_view_names: false
     point_style: none
     series_colors:
-      fact.conversion_rate_this_month: "#d06180"
-      fact.conversion_rate_last_month: "#ea9895"
-      fact.average_conversion_rate: "#ea9895"
-      last_fact.average_conversion_rate: "#d06180"
+      fact.conversion_rate_last_month: "#d06180"
+      fact.conversion_rate_this_month: "#ea9895"
+      fact.average_conversion_rate: "#d06180"
+      last_fact.average_conversion_rate: "#ea9895"
     series_labels:
       fact.average_conversion_rate: This Period
       last_fact.average_conversion_rate: Prior Period
@@ -506,31 +488,14 @@
       show_hide: show
       first_last: first
       num_rows: '10'
-    y_axes:
-    - label: ''
-      maxValue:
-      minValue:
-      orientation: bottom
-      showLabels: true
-      showValues: false
-      tickDensity: default
-      tickDensityCustom:
-      type: linear
-      unpinAxis: false
-      valueFormat:
-      series:
-      - id: fact.average_conversion_rate
-        name: Period Fact
-        axisId: fact.average_conversion_rate
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 955
-      - id: last_fact.average_conversion_rate
-        name: Last Period Fact
-        axisId: last_fact.average_conversion_rate
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 960
-      __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 943
+    y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
+        showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
+        type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_conversion_rate,
+            name: Period Fact, axisId: fact.average_conversion_rate, __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+            __LINE_NUM: 522}, {id: last_fact.average_conversion_rate, name: Last Period
+              Fact, axisId: last_fact.average_conversion_rate, __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+            __LINE_NUM: 527}], __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml,
+        __LINE_NUM: 510}]
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -557,15 +522,13 @@
     enable_conditional_formatting: false
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
-    hidden_fields:
-    - ad_group.ad_group_name
-    - campaign.name
-    - fact.total_conversions
-    - fact.total_clicks
-    - last_fact.total_conversions
-    - last_fact.total_clicks
-    - fact.average_conversion_rate_period_percent_change
-    listen: {}
+    hidden_fields: [ad_group.ad_group_name, campaign.name, fact.total_conversions, fact.total_clicks,
+      last_fact.total_conversions, last_fact.total_clicks, fact.average_conversion_rate_period_percent_change]
+    listen:
+    Period: fact.period
+    Period Latest: fact.date_period_latest
+    Campaign: fact.campaign_name
+    Account: fact.account_name
     row: 17
     col: 12
     width: 12
@@ -680,7 +643,11 @@
     - last_fact.total_conversions
     - last_fact.total_clicks
     - fact.average_conversion_rate_period_percent_change
-    listen: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
     row: 17
     col: 0
     width: 12
