@@ -66,6 +66,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 0
     width: 14
@@ -133,6 +134,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 14
     width: 10
@@ -211,6 +213,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 0
     width: 8
@@ -289,6 +292,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 16
     width: 8
@@ -367,6 +371,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 8
     width: 8
@@ -455,6 +460,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 24
     col: 0
     width: 11
@@ -535,6 +541,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 17
     col: 11
     width: 13
@@ -615,6 +622,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 17
     col: 0
     width: 11
