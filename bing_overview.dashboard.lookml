@@ -100,6 +100,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 0
     width: 9
@@ -204,6 +205,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 14
     width: 5
@@ -306,6 +308,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 9
     width: 5
@@ -410,6 +413,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 19
     width: 5
@@ -516,6 +520,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 3
     col: 9
     width: 15
@@ -583,7 +588,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
+      Account: fact.account_name
       Campaign: fact.campaign_name
+      Ad Group: fact.ad_group_name
     row: 3
     col: 0
     width: 9
@@ -667,6 +674,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 13
     col: 0
     width: 9
@@ -771,6 +779,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 13
     col: 9
     width: 4
@@ -879,6 +888,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 13
     col: 13
     width: 11
@@ -975,6 +985,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 19
     col: 0
     width: 24
@@ -1079,6 +1090,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 16
     col: 9
     width: 4

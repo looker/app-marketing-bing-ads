@@ -65,6 +65,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 14
     width: 10
@@ -143,6 +144,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 0
     width: 8
@@ -221,6 +223,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 16
     width: 8
@@ -299,6 +302,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 8
     width: 8
@@ -446,6 +450,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 0
     width: 14
@@ -525,10 +530,11 @@
     hidden_fields: [ad_group.ad_group_name, campaign.name, fact.total_conversions, fact.total_clicks,
       last_fact.total_conversions, last_fact.total_clicks, fact.average_conversion_rate_period_percent_change]
     listen:
-    Period: fact.period
-    Period Latest: fact.date_period_latest
-    Campaign: fact.campaign_name
-    Account: fact.account_name
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 17
     col: 12
     width: 12
@@ -648,6 +654,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 17
     col: 0
     width: 12

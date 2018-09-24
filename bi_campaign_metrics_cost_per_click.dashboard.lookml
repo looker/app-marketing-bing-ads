@@ -65,6 +65,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 14
     width: 10
@@ -143,6 +144,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 0
     width: 8
@@ -221,6 +223,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 16
     width: 8
@@ -299,6 +302,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 11
     col: 8
     width: 8
@@ -446,6 +450,7 @@
       Period Latest: fact.date_period_latest
       Campaign: fact.campaign_name
       Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 0
     col: 0
     width: 14
@@ -551,6 +556,12 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 17
     col: 0
     width: 8
@@ -657,6 +668,12 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 17
     col: 8
     width: 8
@@ -776,6 +793,12 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 17
     col: 16
     width: 8
