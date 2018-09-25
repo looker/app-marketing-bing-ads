@@ -61,7 +61,7 @@
       allow_multiple_values: true
       required: false
       model: marketing_analytics
-      explore: linkedin_ads_ad_impressions
+      explore: bing_ads_ad_impressions
       listens_to_filters:
       - Period
       - Period Latest
