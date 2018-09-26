@@ -469,9 +469,6 @@
     - last_fact.total_cost
     - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_cost_per_conversion_period_percent_change desc
     limit: 50
@@ -591,9 +588,6 @@
     - last_fact.total_cost
     - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_cost_per_conversion_period_percent_change desc
     limit: 50
@@ -712,9 +706,6 @@
     - last_fact.total_cost
     - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_cost_per_conversion_period_percent_change_abs desc
     limit: 50
