@@ -1,4 +1,5 @@
 include: "bing_ad_metrics_base.view"
+include: "date_fact.view"
 
 explore: bing_period_fact {
   persist_with: bing_ads_etl_datagroup
@@ -43,10 +44,22 @@ explore: bing_period_fact {
       {% endif %} ;;
     relationship: many_to_one
   }
+  join: total {
+    from: bing_date_fact
+    view_label: "Total This Period"
+    sql_on: ${fact.date_period} = ${total.date_period} ;;
+    relationship: many_to_one
+  }
+  join: last_total {
+    from: bing_date_fact
+    view_label: "Total This Period"
+    sql_on: ${fact.date_last_period} = ${total.date_period} ;;
+    relationship: many_to_one
+  }
 }
 
 view: bing_period_fact {
-  extends: [date_base, period_base, ad_metrics_period_comparison_base, ad_metrics_parent_comparison_base, bing_ad_metrics_base]
+  extends: [date_base, period_base, ad_metrics_period_comparison_base, ad_metrics_weighted_period_comparison_base, ad_metrics_parent_comparison_base, bing_ad_metrics_base]
 
   dimension: account_id {
     hidden: yes

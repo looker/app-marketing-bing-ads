@@ -1,5 +1,5 @@
-include: "date_fact.view"
 include: "bing_ad_metrics_base.view"
+include: "date_fact.view"
 
 explore: bing_account_date_fact {
   persist_with: bing_ads_etl_datagroup
@@ -20,6 +20,12 @@ explore: bing_account_date_fact {
     from: bing_date_fact
     view_label: "Total This Period"
     sql_on: ${fact.date_period} = ${total.date_period} ;;
+    relationship: many_to_one
+  }
+  join: last_total {
+    from: bing_date_fact
+    view_label: "Total This Period"
+    sql_on: ${fact.date_last_period} = ${total.date_period} ;;
     relationship: many_to_one
   }
 }
