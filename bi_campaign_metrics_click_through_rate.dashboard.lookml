@@ -469,9 +469,6 @@
     - last_fact.total_impressions
     - fact.average_click_rate_period_percent_change
     - last_fact.ad_group_name
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_click_rate_period_percent_change desc
     limit: 50
@@ -589,9 +586,6 @@
     - last_fact.total_impressions
     - fact.average_click_rate_period_percent_change
     - fact.ad_title
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_click_rate_period_percent_change desc
     limit: 50
@@ -686,6 +680,12 @@
     - last_fact.total_clicks
     - last_fact.total_impressions
     - fact.average_click_rate_period_percent_change
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
+      Ad Group: fact.ad_group_name
     row: 17
     col: 12
     width: 12

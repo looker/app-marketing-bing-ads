@@ -469,9 +469,6 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_cost_per_click_period_percent_change desc
     limit: 500
@@ -580,9 +577,6 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_cost_per_click_period_percent_change desc
     limit: 500
@@ -692,9 +686,6 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_cost_per_click_period_percent_change desc
     limit: 50

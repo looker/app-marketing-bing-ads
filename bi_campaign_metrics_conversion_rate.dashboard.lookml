@@ -463,9 +463,6 @@
     fields: [fact.keyword, last_fact.average_conversion_rate, fact.average_conversion_rate,
       fact.total_conversions, fact.total_clicks, last_fact.total_conversions, last_fact.total_clicks,
       fact.average_conversion_rate_period_percent_change]
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts: [fact.average_conversion_rate_period_percent_change desc]
     limit: 50
     column_limit: 50
@@ -553,9 +550,6 @@
     - last_fact.total_conversions
     - last_fact.total_clicks
     - fact.average_conversion_rate_period_percent_change
-    filters:
-      fact.period: 28 day
-      fact.date_period_latest: 'Yes'
     sorts:
     - fact.average_conversion_rate_period_percent_change desc
     limit: 50
