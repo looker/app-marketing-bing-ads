@@ -13,6 +13,7 @@ view: bing_ads_ad_impressions {
     explore_source: bing_ad_impressions_ad_group {
       column: _date { field: fact.date_date }
       column: channel { field: fact.network }
+      column: device_type { field: fact.device_type }
       column: account_id { field: fact.account_id_string }
       column: account_name { field: fact.account_name }
       column: campaign_id { field: fact.campaign_id_string }
@@ -32,6 +33,7 @@ view: bing_ads_ad_impressions {
     type: date_raw
   }
   dimension: channel {}
+  dimension: device_type {}
   dimension: account_id {
     hidden: yes
   }
