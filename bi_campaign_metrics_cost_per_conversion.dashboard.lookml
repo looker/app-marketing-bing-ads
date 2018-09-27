@@ -34,7 +34,7 @@
         name: Keyword This Period Cost
         axisId: fact.average_cost_per_conversion
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 40
+        __LINE_NUM: 33
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -42,7 +42,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-      __LINE_NUM: 37
+      __LINE_NUM: 30
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -113,7 +113,7 @@
         name: Fact Cost
         axisId: fact.average_cost_per_conversion
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 118
+        __LINE_NUM: 112
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -121,7 +121,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-      __LINE_NUM: 115
+      __LINE_NUM: 109
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -192,7 +192,7 @@
         name: Keyword This Period Cost
         axisId: fact.average_cost_per_conversion
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 196
+        __LINE_NUM: 191
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -200,7 +200,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-      __LINE_NUM: 193
+      __LINE_NUM: 188
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -271,7 +271,7 @@
         name: Cost
         axisId: fact.average_cost_per_conversion
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 358
+        __LINE_NUM: 270
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -279,7 +279,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-      __LINE_NUM: 355
+      __LINE_NUM: 267
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -364,7 +364,7 @@
         name: Cost Per Conversion
         axisId: fact.average_cost_per_conversion
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 619
+        __LINE_NUM: 363
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -372,7 +372,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-      __LINE_NUM: 616
+      __LINE_NUM: 360
     - label:
       orientation: right
       series:
@@ -380,7 +380,7 @@
         name: Cost per Conversion
         axisId: fact.average_cost_per_conversion
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 631
+        __LINE_NUM: 379
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -388,7 +388,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-      __LINE_NUM: 628
+      __LINE_NUM: 376
     - label:
       orientation: right
       series:
@@ -396,7 +396,7 @@
         name: Cost per Click
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 643
+        __LINE_NUM: 395
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -404,7 +404,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-      __LINE_NUM: 640
+      __LINE_NUM: 392
     - label:
       orientation: right
       series:
@@ -412,12 +412,12 @@
         name: Conversion Rate
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 655
+        __LINE_NUM: 411
       - id: fact.average_click_rate
         name: Click Through Rate
         axisId: fact.average_click_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-        __LINE_NUM: 658
+        __LINE_NUM: 416
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -425,7 +425,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
-      __LINE_NUM: 652
+      __LINE_NUM: 408
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -469,6 +469,8 @@
     - last_fact.total_cost
     - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
+    filters:
+      fact.average_cost_per_conversion_period_percent_change: NOT NULL
     sorts:
     - fact.average_cost_per_conversion_period_percent_change desc
     limit: 50
@@ -522,15 +524,15 @@
       - id: fact.average_cost_per_conversion
         name: Period Fact
         axisId: fact.average_cost_per_conversion
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-        __LINE_NUM: 851
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+        __LINE_NUM: 522
       - id: last_fact.average_cost_per_conversion
         name: Last Period Fact
         axisId: last_fact.average_cost_per_conversion
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-        __LINE_NUM: 856
-      __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-      __LINE_NUM: 839
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+        __LINE_NUM: 527
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+      __LINE_NUM: 510
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -588,16 +590,18 @@
     - last_fact.total_cost
     - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
+    filters:
+      fact.average_cost_per_conversion_period_percent_change: NOT NULL
     sorts:
     - fact.average_cost_per_conversion_period_percent_change desc
     limit: 50
     column_limit: 50
     stacking: ''
     colors:
-    - "#ea9895"
-    - "#d06180"
     - "#a6b7ff"
     - "#7869df"
+    - "#ea9895"
+    - "#d06180"
     - "#6e98f9"
     - "#8ac8ca"
     - "#dc9d4f"
@@ -639,15 +643,15 @@
       - id: fact.average_cost_per_conversion
         name: Period Fact
         axisId: fact.average_cost_per_conversion
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-        __LINE_NUM: 1084
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+        __LINE_NUM: 639
       - id: last_fact.average_cost_per_conversion
         name: Last Period Fact
         axisId: last_fact.average_cost_per_conversion
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-        __LINE_NUM: 1089
-      __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-      __LINE_NUM: 1072
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+        __LINE_NUM: 644
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+      __LINE_NUM: 627
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -701,23 +705,21 @@
     - fact.ad_title
     - last_fact.average_cost_per_conversion
     - fact.average_cost_per_conversion
-    - fact.total_cost
-    - fact.total_conversions
-    - last_fact.total_cost
-    - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
+    - fact.ad_group_name
+    - fact.campaign_name
+    filters:
+      fact.average_cost_per_conversion_period_percent_change: NOT NULL
     sorts:
     - fact.average_cost_per_conversion_period_percent_change_abs desc
     limit: 50
     column_limit: 50
     stacking: ''
     colors:
-    - "#dc9d4f"
-    - "#dc9d4f"
-    - "#ea9895"
-    - "#d06180"
     - "#a6b7ff"
     - "#7869df"
+    - "#ea9895"
+    - "#d06180"
     - "#6e98f9"
     - "#8ac8ca"
     - "#dc9d4f"
@@ -733,8 +735,7 @@
     y_axis_gridlines: false
     show_view_names: false
     point_style: none
-    series_colors:
-      last_fact.average_cost_per_conversion: "#f1cc9a"
+    series_colors: {}
     series_labels:
       fact.average_cost_per_conversion: This Period
       last_fact.average_cost_per_conversion: Prior Period
@@ -760,15 +761,15 @@
       - id: fact.average_cost_per_conversion
         name: Period Fact
         axisId: fact.average_cost_per_conversion
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-        __LINE_NUM: 969
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+        __LINE_NUM: 760
       - id: last_fact.average_cost_per_conversion
         name: Last Period Fact
         axisId: last_fact.average_cost_per_conversion
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-        __LINE_NUM: 974
-      __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpa.dashboard.lookml
-      __LINE_NUM: 957
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+        __LINE_NUM: 765
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_conversion.dashboard.lookml
+      __LINE_NUM: 748
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -798,11 +799,9 @@
     hidden_fields:
     - ad_group.ad_group_name
     - campaign.name
-    - fact.total_cost
-    - fact.total_conversions
-    - last_fact.total_cost
-    - last_fact.total_conversions
     - fact.average_cost_per_conversion_period_percent_change
+    - fact.ad_group_name
+    - fact.campaign_name
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest

@@ -34,7 +34,7 @@
         name: Keyword This Period Cost
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 40
+        __LINE_NUM: 33
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -42,7 +42,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-      __LINE_NUM: 37
+      __LINE_NUM: 30
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -113,7 +113,7 @@
         name: Fact Cost
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 118
+        __LINE_NUM: 112
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -121,7 +121,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-      __LINE_NUM: 115
+      __LINE_NUM: 109
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -192,7 +192,7 @@
         name: Keyword This Period Cost
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 196
+        __LINE_NUM: 191
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -200,7 +200,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-      __LINE_NUM: 193
+      __LINE_NUM: 188
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -271,7 +271,7 @@
         name: Cost
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 358
+        __LINE_NUM: 270
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -279,7 +279,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-      __LINE_NUM: 355
+      __LINE_NUM: 267
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -364,7 +364,7 @@
         name: Cost Per Click
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 619
+        __LINE_NUM: 363
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -372,7 +372,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-      __LINE_NUM: 616
+      __LINE_NUM: 360
     - label:
       orientation: right
       series:
@@ -380,7 +380,7 @@
         name: Cost Per Click
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 631
+        __LINE_NUM: 379
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -388,7 +388,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-      __LINE_NUM: 628
+      __LINE_NUM: 376
     - label:
       orientation: right
       series:
@@ -396,7 +396,7 @@
         name: Cost per Click
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 643
+        __LINE_NUM: 395
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -404,7 +404,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-      __LINE_NUM: 640
+      __LINE_NUM: 392
     - label:
       orientation: right
       series:
@@ -412,12 +412,12 @@
         name: Conversion Rate
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 655
+        __LINE_NUM: 411
       - id: fact.average_click_rate
         name: Click Through Rate
         axisId: fact.average_click_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-        __LINE_NUM: 658
+        __LINE_NUM: 416
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -425,7 +425,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
-      __LINE_NUM: 652
+      __LINE_NUM: 408
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -469,6 +469,8 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
+    filters:
+      fact.average_cost_per_click_period_percent_change: NOT NULL
     sorts:
     - fact.average_cost_per_click_period_percent_change desc
     limit: 500
@@ -520,15 +522,15 @@
       - id: fact.average_cost_per_click
         name: Period Fact
         axisId: fact.average_cost_per_click
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-        __LINE_NUM: 826
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
+        __LINE_NUM: 520
       - id: last_fact.average_cost_per_click
         name: Last Period Fact
         axisId: last_fact.average_cost_per_click
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-        __LINE_NUM: 831
-      __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-      __LINE_NUM: 814
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
+        __LINE_NUM: 525
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
+      __LINE_NUM: 508
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -577,16 +579,18 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
+    filters:
+      fact.average_cost_per_click_period_percent_change: NOT NULL
     sorts:
     - fact.average_cost_per_click_period_percent_change desc
     limit: 500
     column_limit: 50
     stacking: ''
     colors:
-    - "#ea9895"
-    - "#d06180"
     - "#a6b7ff"
     - "#7869df"
+    - "#ea9895"
+    - "#d06180"
     - "#6e98f9"
     - "#8ac8ca"
     - "#dc9d4f"
@@ -628,15 +632,15 @@
       - id: fact.average_cost_per_click
         name: Period Fact
         axisId: fact.average_cost_per_click
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-        __LINE_NUM: 932
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
+        __LINE_NUM: 628
       - id: last_fact.average_cost_per_click
         name: Last Period Fact
         axisId: last_fact.average_cost_per_click
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-        __LINE_NUM: 937
-      __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-      __LINE_NUM: 920
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
+        __LINE_NUM: 633
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cost_per_click.dashboard.lookml
+      __LINE_NUM: 616
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -678,78 +682,31 @@
     explore: bing_ad_date_fact
     type: looker_bar
     fields:
-    - fact.ad_title
-    - last_fact.average_cost_per_click
     - fact.average_cost_per_click
     - fact.total_cost
     - fact.total_clicks
+    - last_fact.average_cost_per_click
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
+    - fact.ad_title
+    - fact.ad_group_name
+    - fact.campaign_name
+    filters:
+      fact.average_cost_per_click_period_percent_change_abs: NOT NULL
     sorts:
-    - fact.average_cost_per_click_period_percent_change desc
+    - fact.average_cost_per_click_period_percent_change_abs desc
     limit: 50
     column_limit: 50
+    query_timezone: America/Los_Angeles
     stacking: ''
-    colors:
-    - "#dc9d4f"
-    - "#dc9d4f"
-    - "#ea9895"
-    - "#d06180"
-    - "#a6b7ff"
-    - "#7869df"
-    - "#6e98f9"
-    - "#8ac8ca"
-    - "#dc9d4f"
-    - "#4bb86a"
-    - "#a4a6a9"
-    - "#a6b7ff"
-    - "#afe8fd"
-    - "#ea989"
     show_value_labels: true
     label_density: 25
     legend_position: center
     x_axis_gridlines: false
     y_axis_gridlines: false
     show_view_names: false
-    point_style: none
-    series_colors:
-      fact.cost_per_conversion_last_month: "#f1cc9a"
-      last_fact.average_cost_per_click: "#f1cc9a"
-    series_labels:
-      last_fact.average_cost_per_click: Prior Period
-      fact.average_cost_per_click: This Period
-    series_types: {}
     limit_displayed_rows: true
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
-    y_axes:
-    - label: ''
-      maxValue:
-      minValue:
-      orientation: bottom
-      showLabels: true
-      showValues: false
-      tickDensity: default
-      tickDensityCustom:
-      type: linear
-      unpinAxis: false
-      valueFormat:
-      series:
-      - id: fact.average_cost_per_click
-        name: Period Fact
-        axisId: fact.average_cost_per_click
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-        __LINE_NUM: 1065
-      - id: last_fact.average_cost_per_click
-        name: Last Period Fact
-        axisId: last_fact.average_cost_per_click
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-        __LINE_NUM: 1070
-      __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_cpc.dashboard.lookml
-      __LINE_NUM: 1053
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -759,15 +716,11 @@
     show_x_axis_ticks: true
     x_axis_scale: auto
     y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
     ordering: none
     show_null_labels: false
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
-    query_timezone: America/Los_Angeles
     show_row_numbers: true
     truncate_column_names: false
     hide_totals: false
@@ -784,6 +737,54 @@
     - last_fact.total_cost
     - last_fact.total_clicks
     - fact.average_cost_per_click_period_percent_change
+    - fact.ad_group_name
+    - fact.campaign_name
+    series_types: {}
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    colors:
+    - "#a6b7ff"
+    - "#7869df"
+    - "#ea9895"
+    - "#d06180"
+    - "#6e98f9"
+    - "#8ac8ca"
+    - "#dc9d4f"
+    - "#4bb86a"
+    - "#a4a6a9"
+    - "#a6b7ff"
+    - "#afe8fd"
+    - "#ea989"
+    series_colors: {}
+    y_axes:
+    - label: ''
+      maxValue:
+      minValue:
+      orientation: bottom
+      showLabels: true
+      showValues: false
+      tickDensity: default
+      tickDensityCustom:
+      type: linear
+      unpinAxis: false
+      valueFormat:
+      series:
+      - id: fact.average_cost_per_click
+        name: Period Fact
+        axisId: fact.average_cost_per_click
+        __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_cpc.dashboard.lookml
+        __LINE_NUM: 1067
+      - id: last_fact.average_cost_per_click
+        name: Last Period Fact
+        axisId: last_fact.average_cost_per_click
+        __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_cpc.dashboard.lookml
+        __LINE_NUM: 1072
+      __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_cpc.dashboard.lookml
+      __LINE_NUM: 1055
+    x_axis_reversed: false
+    y_axis_reversed: false
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
