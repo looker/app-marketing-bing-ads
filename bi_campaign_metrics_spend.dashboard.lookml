@@ -103,7 +103,7 @@
         name: Keyword This Period Cost
         axisId: fact.total_cost
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_spend.dashboard.lookml
-        __LINE_NUM: 110
+        __LINE_NUM: 102
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -111,7 +111,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_spend.dashboard.lookml
-      __LINE_NUM: 107
+      __LINE_NUM: 99
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -182,7 +182,7 @@
         name: Fact Cost
         axisId: fact.total_cost
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_spend.dashboard.lookml
-        __LINE_NUM: 185
+        __LINE_NUM: 181
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -190,7 +190,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_spend.dashboard.lookml
-      __LINE_NUM: 182
+      __LINE_NUM: 178
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -340,7 +340,7 @@
         name: Cost
         axisId: fact.total_cost
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_spend.dashboard.lookml
-        __LINE_NUM: 416
+        __LINE_NUM: 339
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -348,7 +348,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_spend.dashboard.lookml
-      __LINE_NUM: 413
+      __LINE_NUM: 336
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -376,65 +376,32 @@
     col: 8
     width: 8
     height: 6
-  - title: Top Landing Pages
-    name: Top Landing Pages
+  - title: Ad Spend Change
+    name: Ad Spend Change
     model: marketing_analytics
-    explore: bing_keyword_date_fact
+    explore: bing_ad_date_fact
     type: looker_bar
     fields:
-    - fact.total_cost
-    - fact.final_url
+    - fact.ad_title
     - fact.ad_group_name
     - fact.campaign_name
+    - last_fact.total_cost
+    - fact.total_cost
+    - fact.total_cost_period_delta
+    filters:
+      fact.total_cost_period_delta_abs: ">0"
     sorts:
-    - fact.total_cost desc
+    - fact.total_cost_period_delta_abs desc
     limit: 50
-    query_timezone: America/Los_Angeles
+    column_limit: 50
     stacking: ''
-    colors:
-    - "#f1e582"
-    - "#7869df"
-    - "#6e98f9"
-    - "#8ac8ca"
-    - "#d06180"
-    - "#dc9d4f"
-    - "#4bb86a"
-    - "#a4a6a9"
-    - "#a6b7ff"
-    - "#afe8fd"
-    - "#ea9895"
-    - "#f1e582"
     show_value_labels: true
     label_density: 25
     legend_position: center
     x_axis_gridlines: false
     y_axis_gridlines: true
-    show_view_names: true
-    point_style: none
-    series_colors: {}
-    series_types: {}
+    show_view_names: false
     limit_displayed_rows: true
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '7'
-    y_axes:
-    - label: ''
-      orientation: bottom
-      series:
-      - id: fact.total_cost
-        name: Keyword This Period Cost
-        axisId: fact.total_cost
-        __FILE: app-marketing-bing-ads/bi_campaign_metrics_spend.dashboard.lookml
-        __LINE_NUM: 498
-      showLabels: false
-      showValues: false
-      unpinAxis: false
-      tickDensity: default
-      tickDensityCustom: 5
-      type: linear
-      __FILE: app-marketing-bing-ads/bi_campaign_metrics_spend.dashboard.lookml
-      __LINE_NUM: 495
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -444,17 +411,274 @@
     show_x_axis_ticks: true
     x_axis_scale: auto
     y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
     ordering: none
     show_null_labels: false
     show_totals_labels: false
     show_silhouette: false
     totals_color: "#808080"
+    query_timezone: America/Los_Angeles
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    series_types: {}
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '7'
     hidden_fields:
+    - campaign.name
+    - ad_group.ad_group_name
+    - fact.total_cost_period_delta
     - fact.ad_group_name
     - fact.campaign_name
+    y_axes:
+    - label: ''
+      maxValue:
+      minValue:
+      orientation: bottom
+      showLabels: false
+      showValues: false
+      tickDensity: default
+      tickDensityCustom: 5
+      type: linear
+      unpinAxis: false
+      valueFormat:
+      series:
+      - id: fact.total_cost
+        name: Cost
+        axisId: fact.total_cost
+        __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_spend.dashboard.lookml
+        __LINE_NUM: 916
+      __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_spend.dashboard.lookml
+      __LINE_NUM: 904
+    hide_legend: false
+    colors:
+    - "#a6b7ff"
+    - "#7869df"
+    - "#ea9895"
+    - "#d06180"
+    - "#6e98f9"
+    - "#8ac8ca"
+    - "#dc9d4f"
+    - "#4bb86a"
+    - "#a4a6a9"
+    - "#a6b7ff"
+    - "#afe8fd"
+    - "#ea989"
+    series_colors: {}
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
+      Ad Group: fact.ad_group_name
+    row: 17
+    col: 0
+    width: 12
+    height: 7
+  - title: Keyword Spend Change
+    name: Keyword Spend Change
+    model: marketing_analytics
+    explore: bing_keyword_date_fact
+    type: looker_bar
+    fields:
+    - fact.ad_group_name
+    - fact.campaign_name
+    - last_fact.total_cost
+    - fact.total_cost
+    - fact.total_cost_period_delta
+    - fact.keyword
+    filters:
+      fact.total_cost_period_delta_abs: ">0"
+    sorts:
+    - fact.total_cost_period_delta_abs desc
+    limit: 50
+    column_limit: 50
+    stacking: ''
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    limit_displayed_rows: true
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    query_timezone: America/Los_Angeles
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    series_types: {}
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '7'
+    hidden_fields:
+    - ad_group.ad_group_name
+    - campaign.name
+    - fact.total_cost_period_delta
+    - fact.ad_group_name
+    - fact.campaign_name
+    colors:
+    - "#a6b7ff"
+    - "#7869df"
+    - "#ea9895"
+    - "#d06180"
+    - "#6e98f9"
+    - "#8ac8ca"
+    - "#dc9d4f"
+    - "#4bb86a"
+    - "#a4a6a9"
+    - "#a6b7ff"
+    - "#afe8fd"
+    - "#ea989"
+    series_colors: {}
+    y_axes:
+    - label: ''
+      maxValue:
+      minValue:
+      orientation: bottom
+      showLabels: false
+      showValues: false
+      tickDensity: default
+      tickDensityCustom: 5
+      type: linear
+      unpinAxis: false
+      valueFormat:
+      series:
+      - id: fact.total_cost
+        name: Cost
+        axisId: fact.total_cost
+        __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_spend.dashboard.lookml
+        __LINE_NUM: 1032
+      __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_spend.dashboard.lookml
+      __LINE_NUM: 1020
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
+      Ad Group: fact.ad_group_name
+    row: 17
+    col: 12
+    width: 12
+    height: 13
+  - title: Landing Pages Spend Change
+    name: Landing Pages Spend Change
+    model: marketing_analytics
+    explore: bing_keyword_date_fact
+    type: looker_bar
+    fields:
+    - fact.total_cost
+    - last_fact.total_cost
+    - fact.total_cost_period_delta
+    - fact.final_url
+    - fact.ad_group_name
+    - fact.campaign_name
+    filters:
+      fact.total_cost_period_delta_abs: ">0"
+    sorts:
+    - fact.total_cost_period_delta_abs desc
+    limit: 50
+    column_limit: 50
+    stacking: ''
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: false
+    limit_displayed_rows: true
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    query_timezone: America/Los_Angeles
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: gray
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    series_types: {}
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '7'
+    hidden_fields:
+    - ad_group.ad_group_name
+    - campaign.name
+    - fact.total_cost_period_delta
+    - fact.ad_group_name
+    - fact.campaign_name
+    colors:
+    - "#a6b7ff"
+    - "#7869df"
+    - "#ea9895"
+    - "#d06180"
+    - "#6e98f9"
+    - "#8ac8ca"
+    - "#dc9d4f"
+    - "#4bb86a"
+    - "#a4a6a9"
+    - "#a6b7ff"
+    - "#afe8fd"
+    - "#ea989"
+    series_colors: {}
+    y_axes:
+    - label: ''
+      maxValue:
+      minValue:
+      orientation: bottom
+      showLabels: false
+      showValues: false
+      tickDensity: default
+      tickDensityCustom: 5
+      type: linear
+      unpinAxis: false
+      valueFormat:
+      series:
+      - id: fact.total_cost
+        name: Cost
+        axisId: fact.total_cost
+        __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_spend.dashboard.lookml
+        __LINE_NUM: 1133
+      __FILE: 3d4d8a33c661890929b121b4e924d117eecde31cb0ea6051d83c9520edafe118686d9547/campaign_metrics_spend.dashboard.lookml
+      __LINE_NUM: 1121
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
@@ -463,167 +687,5 @@
       Ad Group: fact.ad_group_name
     row: 24
     col: 0
-    width: 11
-    height: 8
-  - title: Top Keywords by Spend
-    name: Top Keywords by Spend
-    model: marketing_analytics
-    explore: bing_keyword_date_fact
-    type: looker_column
-    fields:
-    - fact.campaign_name
-    - fact.ad_group_name
-    - fact.keyword
-    - fact.total_cost
-    sorts:
-    - fact.total_cost desc
-    limit: 50
-    stacking: ''
-    colors:
-    - "#ea9895"
-    - "#7869df"
-    - "#6e98f9"
-    - "#8ac8ca"
-    - "#d06180"
-    - "#dc9d4f"
-    - "#4bb86a"
-    - "#a4a6a9"
-    - "#a6b7ff"
-    - "#afe8fd"
-    - "#ea9895"
-    - "#f1e582"
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: false
-    point_style: none
-    series_colors: {}
-    series_types: {}
-    limit_displayed_rows: false
-    y_axes:
-    - label: ''
-      orientation: left
-      series:
-      - id: fact.total_cost
-        name: Cost
-        axisId: fact.total_cost
-      showLabels: false
-      showValues: false
-      unpinAxis: false
-      tickDensity: default
-      tickDensityCustom: 5
-      type: linear
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: false
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    query_timezone: America/Los_Angeles
-    hidden_fields:
-    - fact.campaign_name
-    - fact.ad_group_name
-    listen:
-      Period: fact.period
-      Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
-    row: 17
-    col: 11
-    width: 13
-    height: 15
-  - title: Top Ads by Spend
-    name: Top Ads by Spend
-    model: marketing_analytics
-    explore: bing_ad_date_fact
-    type: looker_column
-    fields:
-    - fact.campaign_name
-    - fact.ad_group_name
-    - fact.ad_title
-    - fact.total_cost
-    sorts:
-    - fact.total_cost desc
-    limit: 50
-    stacking: ''
-    colors:
-    - "#a6b7ff"
-    - "#7869df"
-    - "#6e98f9"
-    - "#8ac8ca"
-    - "#d06180"
-    - "#dc9d4f"
-    - "#4bb86a"
-    - "#a4a6a9"
-    - "#a6b7ff"
-    - "#afe8fd"
-    - "#ea9895"
-    - "#f1e582"
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: true
-    point_style: none
-    series_colors: {}
-    series_types: {}
-    limit_displayed_rows: false
-    y_axes:
-    - label: ''
-      orientation: left
-      series:
-      - id: fact.total_cost
-        name: Ad This Period Cost
-        axisId: fact.total_cost
-      showLabels: false
-      showValues: false
-      unpinAxis: false
-      tickDensity: default
-      tickDensityCustom: 5
-      type: linear
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: false
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    query_timezone: America/Los_Angeles
-    hidden_fields:
-    - fact.ad_group_name
-    - fact.campaign_name
-    listen:
-      Period: fact.period
-      Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
-    row: 17
-    col: 0
-    width: 11
-    height: 7
+    width: 12
+    height: 6

@@ -34,7 +34,7 @@
         name: Keyword This Period Cost
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 40
+        __LINE_NUM: 33
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -42,7 +42,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 37
+      __LINE_NUM: 30
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -113,7 +113,7 @@
         name: Fact Cost
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 118
+        __LINE_NUM: 112
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -121,7 +121,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 115
+      __LINE_NUM: 109
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -192,7 +192,7 @@
         name: Keyword This Period Cost
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 196
+        __LINE_NUM: 191
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -200,7 +200,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 193
+      __LINE_NUM: 188
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -271,7 +271,7 @@
         name: Cost
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 358
+        __LINE_NUM: 270
       showLabels: false
       showValues: false
       unpinAxis: false
@@ -279,7 +279,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 355
+      __LINE_NUM: 267
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -364,7 +364,7 @@
         name: Conversion Rate
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 619
+        __LINE_NUM: 363
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -372,7 +372,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 616
+      __LINE_NUM: 360
     - label:
       orientation: right
       series:
@@ -380,7 +380,7 @@
         name: Conversion Rate
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 631
+        __LINE_NUM: 379
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -388,7 +388,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 628
+      __LINE_NUM: 376
     - label:
       orientation: right
       series:
@@ -396,7 +396,7 @@
         name: Cost per Click
         axisId: fact.average_cost_per_click
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 643
+        __LINE_NUM: 395
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -404,7 +404,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 640
+      __LINE_NUM: 392
     - label:
       orientation: right
       series:
@@ -412,12 +412,12 @@
         name: Conversion Rate
         axisId: fact.average_conversion_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 655
+        __LINE_NUM: 411
       - id: fact.average_click_rate
         name: Click Through Rate
         axisId: fact.average_click_rate
         __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 658
+        __LINE_NUM: 416
       showLabels: true
       showValues: true
       unpinAxis: false
@@ -425,7 +425,7 @@
       tickDensityCustom: 5
       type: linear
       __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 652
+      __LINE_NUM: 408
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -455,87 +455,6 @@
     col: 0
     width: 14
     height: 11
-  - title: Keyword Conversion Rate Change
-    name: Keyword Conversion Rate Change
-    model: marketing_analytics
-    explore: bing_keyword_date_fact
-    type: looker_bar
-    fields: [fact.keyword, last_fact.average_conversion_rate, fact.average_conversion_rate,
-      fact.total_conversions, fact.total_clicks, last_fact.total_conversions, last_fact.total_clicks,
-      fact.average_conversion_rate_period_percent_change]
-    sorts: [fact.average_conversion_rate_period_percent_change desc]
-    limit: 50
-    column_limit: 50
-    stacking: ''
-    colors: ["#a6b7ff", "#7869df", "#6e98f9", "#8ac8ca", "#d06180", "#dc9d4f", "#4bb86a",
-      "#a4a6a9", "#a6b7ff", "#afe8fd", "#ea9895", "#f1e582"]
-    show_value_labels: true
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: false
-    show_view_names: false
-    point_style: none
-    series_colors:
-      fact.conversion_rate_last_month: "#d06180"
-      fact.conversion_rate_this_month: "#ea9895"
-      fact.average_conversion_rate: "#d06180"
-      last_fact.average_conversion_rate: "#ea9895"
-    series_labels:
-      fact.average_conversion_rate: This Period
-      last_fact.average_conversion_rate: Prior Period
-    series_types: {}
-    limit_displayed_rows: true
-    limit_displayed_rows_values:
-      show_hide: show
-      first_last: first
-      num_rows: '10'
-    y_axes: [{label: '', maxValue: !!null '', minValue: !!null '', orientation: bottom,
-        showLabels: true, showValues: false, tickDensity: default, tickDensityCustom: !!null '',
-        type: linear, unpinAxis: false, valueFormat: !!null '', series: [{id: fact.average_conversion_rate,
-            name: Period Fact, axisId: fact.average_conversion_rate, __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml,
-            __LINE_NUM: 522}, {id: last_fact.average_conversion_rate, name: Last Period
-              Fact, axisId: last_fact.average_conversion_rate, __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml,
-            __LINE_NUM: 527}], __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml,
-        __LINE_NUM: 510}]
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: false
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    x_axis_reversed: false
-    y_axis_reversed: false
-    plot_size_by_field: false
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    query_timezone: America/Los_Angeles
-    show_row_numbers: true
-    truncate_column_names: false
-    hide_totals: false
-    hide_row_totals: false
-    table_theme: editable
-    enable_conditional_formatting: false
-    conditional_formatting_include_totals: false
-    conditional_formatting_include_nulls: false
-    hidden_fields: [ad_group.ad_group_name, campaign.name, fact.total_conversions, fact.total_clicks,
-      last_fact.total_conversions, last_fact.total_clicks, fact.average_conversion_rate_period_percent_change]
-    listen:
-      Period: fact.period
-      Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
-    row: 17
-    col: 12
-    width: 12
-    height: 8
   - title: Ad Group Conversion Rate Change
     name: Ad Group Conversion Rate Change
     model: marketing_analytics
@@ -550,6 +469,8 @@
     - last_fact.total_conversions
     - last_fact.total_clicks
     - fact.average_conversion_rate_period_percent_change
+    filters:
+      fact.average_conversion_rate_period_percent_change: NOT NULL
     sorts:
     - fact.average_conversion_rate_period_percent_change desc
     limit: 50
@@ -601,15 +522,15 @@
       - id: fact.average_conversion_rate
         name: Period Fact
         axisId: fact.average_conversion_rate
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 839
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
+        __LINE_NUM: 601
       - id: last_fact.average_conversion_rate
         name: Last Period Fact
         axisId: last_fact.average_conversion_rate
-        __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_conversion_rate.dashboard.lookml
-        __LINE_NUM: 844
-      __FILE: 3d4d8a33c661890929b121b4e924d117a835b36c4f1c0ba3452b4a66c6fd1b198025c385/campaign_metrics_conversion_rate.dashboard.lookml
-      __LINE_NUM: 827
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
+        __LINE_NUM: 606
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
+      __LINE_NUM: 589
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -651,5 +572,125 @@
       Ad Group: fact.ad_group_name
     row: 17
     col: 0
+    width: 12
+    height: 8
+  - title: Keyword Conversion Rate Change
+    name: Keyword Conversion Rate Change
+    model: marketing_analytics
+    explore: bing_keyword_date_fact
+    type: looker_bar
+    fields:
+    - fact.keyword
+    - last_fact.average_conversion_rate
+    - fact.average_conversion_rate
+    - fact.total_conversions
+    - fact.total_clicks
+    - last_fact.total_conversions
+    - last_fact.total_clicks
+    - fact.average_conversion_rate_period_percent_change
+    filters:
+      fact.average_conversion_rate_period_percent_change: NOT NULL
+    sorts:
+    - fact.average_conversion_rate_period_percent_change desc
+    limit: 50
+    column_limit: 50
+    stacking: ''
+    colors:
+    - "#a6b7ff"
+    - "#7869df"
+    - "#ea9895"
+    - "#d06180"
+    - "#6e98f9"
+    - "#8ac8ca"
+    - "#dc9d4f"
+    - "#4bb86a"
+    - "#a4a6a9"
+    - "#a6b7ff"
+    - "#afe8fd"
+    - "#ea989"
+    show_value_labels: true
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: false
+    show_view_names: false
+    point_style: none
+    series_colors: {}
+    series_labels:
+      fact.average_conversion_rate: This Period
+      last_fact.average_conversion_rate: Prior Period
+    series_types: {}
+    limit_displayed_rows: true
+    limit_displayed_rows_values:
+      show_hide: show
+      first_last: first
+      num_rows: '10'
+    y_axes:
+    - label: ''
+      maxValue:
+      minValue:
+      orientation: bottom
+      showLabels: true
+      showValues: false
+      tickDensity: default
+      tickDensityCustom:
+      type: linear
+      unpinAxis: false
+      valueFormat:
+      series:
+      - id: fact.average_conversion_rate
+        name: Period Fact
+        axisId: fact.average_conversion_rate
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
+        __LINE_NUM: 495
+      - id: last_fact.average_conversion_rate
+        name: Last Period Fact
+        axisId: last_fact.average_conversion_rate
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
+        __LINE_NUM: 497
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_conversion_rate.dashboard.lookml
+      __LINE_NUM: 493
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: false
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    plot_size_by_field: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    query_timezone: America/Los_Angeles
+    show_row_numbers: true
+    truncate_column_names: false
+    hide_totals: false
+    hide_row_totals: false
+    table_theme: editable
+    enable_conditional_formatting: false
+    conditional_formatting_include_totals: false
+    conditional_formatting_include_nulls: false
+    hidden_fields:
+    - ad_group.ad_group_name
+    - campaign.name
+    - fact.total_conversions
+    - fact.total_clicks
+    - last_fact.total_conversions
+    - last_fact.total_clicks
+    - fact.average_conversion_rate_period_percent_change
+    listen:
+      Period: fact.period
+      Period Latest: fact.date_period_latest
+      Campaign: fact.campaign_name
+      Account: fact.account_name
+      Ad Group: fact.ad_group_name
+    row: 17
+    col: 12
     width: 12
     height: 8
