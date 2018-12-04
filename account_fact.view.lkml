@@ -1,9 +1,11 @@
 include: "bing_ad_metrics_base.view"
+include: "date_fact.view"
 
 explore: bing_account_date_fact {
   persist_with: bing_ads_etl_datagroup
   hidden: yes
   from: bing_account_date_fact
+  extends: [bing_account_join]
   view_name: fact
   label: "Account This Period"
   view_label: "Account This Period"
