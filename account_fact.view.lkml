@@ -5,6 +5,7 @@ explore: bing_account_date_fact {
   persist_with: bing_ads_etl_datagroup
   hidden: yes
   from: bing_account_date_fact
+  extends: [bing_account_join]
   view_name: fact
   label: "Account This Period"
   view_label: "Account This Period"
@@ -52,7 +53,6 @@ view: bing_account_date_fact {
     explore_source: bing_ad_impressions {
       column: _date { field: fact.date_date }
       column: account_id { field: fact.account_id }
-      column: account_name { field: fact.account_name }
       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
@@ -62,9 +62,6 @@ view: bing_account_date_fact {
     }
   }
   dimension: account_id {
-    hidden: yes
-  }
-  dimension: account_name {
     hidden: yes
   }
   dimension: _date {

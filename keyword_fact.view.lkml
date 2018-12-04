@@ -2,7 +2,7 @@ include: "ad_group_fact.view"
 
 explore: bing_keyword_date_fact {
   persist_with: bing_ads_etl_datagroup
-  extends: [bing_ad_group_date_fact]
+  extends: [bing_ad_group_date_fact, bing_keyword_join]
   from: bing_keyword_date_fact
   view_name: fact
   label: "Keyword This Period"
@@ -49,13 +49,9 @@ view: bing_keyword_date_fact {
     datagroup_trigger: bing_ads_etl_datagroup
     explore_source: bing_ad_impressions_keyword {
       column: _date { field: fact.date_date }
-      column: account_id { field: fact.account_id }
       column: campaign_id {field: fact.campaign_id}
       column: ad_group_id {field: fact.ad_group_id}
       column: keyword_id {field: fact.keyword_id}
-      column: keyword {field: fact.keyword}
-      column: bid_strategy_type {field: fact.bid_strategy_type}
-      column: final_url {field: fact.final_url}
       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
@@ -66,15 +62,6 @@ view: bing_keyword_date_fact {
   }
   dimension: keyword_id {
     hidden: yes
-  }
-
-  dimension: keyword {
-  }
-
-  dimension: final_url {
-  }
-
-  dimension: bid_strategy_type {
   }
   set: detail {
     fields: [account_id, campaign_id, ad_group_id, keyword_id]

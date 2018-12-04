@@ -2,7 +2,7 @@ include: "account_fact.view"
 
 explore: bing_campaign_date_fact {
   persist_with: bing_ads_etl_datagroup
-  extends: [bing_account_date_fact]
+  extends: [bing_account_date_fact, bing_campaign_join]
   from: bing_campaign_date_fact
   view_name: fact
   label: "Campaign This Period"
