@@ -1,5 +1,4 @@
 include: "bing_ad_metrics_base.view"
-include: "date_fact.view"
 
 explore: bing_account_date_fact {
   persist_with: bing_ads_etl_datagroup
@@ -52,7 +51,6 @@ view: bing_account_date_fact {
     explore_source: bing_ad_impressions {
       column: _date { field: fact.date_date }
       column: account_id { field: fact.account_id }
-      column: account_name { field: fact.account_name }
       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
@@ -62,9 +60,6 @@ view: bing_account_date_fact {
     }
   }
   dimension: account_id {
-    hidden: yes
-  }
-  dimension: account_name {
     hidden: yes
   }
   dimension: _date {

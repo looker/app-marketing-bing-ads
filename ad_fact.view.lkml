@@ -2,7 +2,7 @@ include: "ad_group_fact.view"
 
 explore: bing_ad_date_fact {
   persist_with: bing_ads_etl_datagroup
-  extends: [bing_keyword_date_fact]
+  extends: [bing_ad_group_date_fact, bing_ad_join]
   from: bing_ad_date_fact
   view_name: fact
   label: "Ad This Period"
@@ -53,7 +53,6 @@ view: bing_ad_date_fact {
       column: campaign_id {field: fact.campaign_id}
       column: ad_group_id {field: fact.ad_group_id}
       column: ad_id { field: fact.ad_id }
-      column: ad_title { field: fact.ad_title }
       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
@@ -65,10 +64,6 @@ view: bing_ad_date_fact {
   dimension: ad_id {
     hidden: yes
   }
-
-  dimension: ad_title {
-  }
-
   set: detail {
     fields: [account_id, campaign_id, ad_group_id, ad_id]
   }
