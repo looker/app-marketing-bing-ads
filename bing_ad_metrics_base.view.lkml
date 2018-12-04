@@ -9,7 +9,7 @@ view: bing_ad_metrics_base_template {
 
   dimension: conversionvalue {
     type: number
-    sql: ${TABLE}.revenue ;;
+    sql: CAST(${TABLE}.revenue as numeric);;
   }
 
   dimension: cost {
