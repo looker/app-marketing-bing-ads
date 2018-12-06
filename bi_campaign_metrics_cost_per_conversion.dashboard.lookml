@@ -63,9 +63,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 0
     col: 14
     width: 10
@@ -155,7 +155,7 @@
     explore: bing_keyword_date_fact
     type: looker_bar
     fields:
-    - fact.bid_strategy_type
+    - keyword.bid_strategy_type
     - fact.average_cost_per_conversion
     sorts:
     - fact.average_cost_per_conversion desc
@@ -221,9 +221,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 11
     col: 16
     width: 8
@@ -448,9 +448,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 0
     col: 0
     width: 14
@@ -461,7 +461,7 @@
     explore: bing_ad_group_date_fact
     type: looker_bar
     fields:
-    - fact.ad_group_name
+    - ad_group.ad_group_name
     - last_fact.average_cost_per_conversion
     - fact.average_cost_per_conversion
     - fact.total_cost
@@ -569,9 +569,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 0
     width: 8
@@ -582,7 +582,7 @@
     explore: bing_keyword_date_fact
     type: looker_bar
     fields:
-    - fact.keyword
+    - keyword.keyword
     - last_fact.average_cost_per_conversion
     - fact.average_cost_per_conversion
     - fact.total_cost
@@ -689,9 +689,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 8
     width: 8
@@ -702,12 +702,12 @@
     explore: bing_ad_date_fact
     type: looker_bar
     fields:
-    - fact.ad_title
+    - ad.title
     - last_fact.average_cost_per_conversion
     - fact.average_cost_per_conversion
     - fact.average_cost_per_conversion_period_percent_change
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     filters:
       fact.average_cost_per_conversion_period_percent_change: NOT NULL
     sorts:
@@ -800,14 +800,14 @@
     - ad_group.ad_group_name
     - campaign.name
     - fact.average_cost_per_conversion_period_percent_change
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 16
     width: 8
