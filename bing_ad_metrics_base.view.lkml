@@ -9,7 +9,7 @@ view: bing_ad_metrics_base_template {
 
   dimension: conversionvalue {
     type: number
-    sql: CAST(REGEXP_REPLACE(${TABLE}.revenue, r'\,', '') as Numeric);;
+    sql: ${TABLE}.revenue;;
   }
 
   dimension: cost {
