@@ -760,7 +760,6 @@
     conditional_formatting_include_nulls: false
     hidden_fields:
     - campaign.name
-    - ad_group.ad_group_name
     - fact.total_cost
     - last_fact.total_cost
     - fact.total_conversions_period_delta

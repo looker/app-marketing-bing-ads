@@ -60,69 +60,69 @@
       - id: fact.total_conversions
         name: Conversions
         axisId: fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 363
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 60
       showLabels: true
       showValues: true
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 360
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+      __LINE_NUM: 57
     - label:
       orientation: right
       series:
       - id: fact.average_cost_per_conversion
         name: Cost per Conversion
         axisId: fact.average_cost_per_conversion
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 379
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 76
       showLabels: true
       showValues: true
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 376
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+      __LINE_NUM: 73
     - label:
       orientation: right
       series:
       - id: fact.average_cost_per_click
         name: Cost per Click
         axisId: fact.average_cost_per_click
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 395
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 92
       showLabels: true
       showValues: true
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 392
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+      __LINE_NUM: 89
     - label:
       orientation: right
       series:
       - id: fact.average_conversion_rate
         name: Conversion Rate
         axisId: fact.average_conversion_rate
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 411
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 108
       - id: fact.average_click_rate
         name: Click Through Rate
         axisId: fact.average_click_rate
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 416
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 113
       showLabels: true
       showValues: true
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 408
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+      __LINE_NUM: 105
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -193,11 +193,15 @@
       - id: fact.total_impressions
         name: Fact Impressions
         axisId: fact.total_impressions
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 193
       showLabels: false
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+      __LINE_NUM: 190
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -256,11 +260,15 @@
       - id: fact.total_impressions
         name: Keyword This Period Impressions
         axisId: fact.total_impressions
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 256
       showLabels: false
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+      __LINE_NUM: 253
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -330,11 +338,15 @@
       - id: fact.total_impressions
         name: Impressions
         axisId: fact.total_impressions
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 330
       showLabels: false
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+      __LINE_NUM: 327
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -404,11 +416,15 @@
       - id: fact.total_impressions
         name: Keyword This Period Impressions
         axisId: fact.total_impressions
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+        __LINE_NUM: 404
       showLabels: false
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_impressions.dashboard.lookml
+      __LINE_NUM: 401
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -488,23 +504,17 @@
     - label: ''
       orientation: bottom
       series:
-      - id: last_fact.total_conversions
+      - id: last_fact.total_impressions
         name: Ad Last Period
-        axisId: last_fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 511
-      - id: fact.total_conversions
+        axisId: last_fact.total_impressions
+      - id: fact.total_impressions
         name: Ad This Period
-        axisId: fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 514
+        axisId: fact.total_impressions
       showLabels: true
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 508
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -597,23 +607,17 @@
     - label: ''
       orientation: bottom
       series:
-      - id: last_fact.total_conversions
+      - id: last_fact.total_impressions
         name: Keyword Prior Period
-        axisId: last_fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 618
-      - id: fact.total_conversions
+        axisId: last_fact.total_impressions
+      - id: fact.total_impressions
         name: Keyword This Period
-        axisId: fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 621
+        axisId: fact.total_impressions
       showLabels: true
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 615
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -705,23 +709,17 @@
     - label: ''
       orientation: bottom
       series:
-      - id: fact.total_conversions
-        name: Ad Group This Period
-        axisId: fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 724
-      - id: last_fact.total_conversions
+      - id: last_fact.total_impressions
         name: Ad Group Last Period
-        axisId: last_fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 727
+        axisId: last_fact.total_impressions
+      - id: fact.total_impressions
+        name: Ad Group This Period
+        axisId: fact.total_impressions
       showLabels: true
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 721
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -749,8 +747,6 @@
     conditional_formatting_include_totals: false
     conditional_formatting_include_nulls: false
     hidden_fields:
-    - campaign.name
-    - ad_group.ad_group_name
     - campaign.campaign_name
     - last_fact.total_impressions_period_delta
     listen:
