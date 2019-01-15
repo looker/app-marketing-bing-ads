@@ -6,7 +6,7 @@ explore: bing_period_fact {
   hidden: yes
   from: bing_period_fact
   view_name: fact
-  label: "This Period"
+  label: "Bing Period Comparison"
   view_label: "This Period"
 
   join: last_fact {
