@@ -60,69 +60,69 @@
       - id: fact.total_conversions
         name: Conversions
         axisId: fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 363
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 60
       showLabels: true
       showValues: true
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 360
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+      __LINE_NUM: 57
     - label:
       orientation: right
       series:
       - id: fact.average_cost_per_conversion
         name: Cost per Conversion
         axisId: fact.average_cost_per_conversion
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 379
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 76
       showLabels: true
       showValues: true
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 376
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+      __LINE_NUM: 73
     - label:
       orientation: right
       series:
       - id: fact.average_cost_per_click
         name: Cost per Click
         axisId: fact.average_cost_per_click
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 395
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 92
       showLabels: true
       showValues: true
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 392
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+      __LINE_NUM: 89
     - label:
       orientation: right
       series:
       - id: fact.average_conversion_rate
         name: Conversion Rate
         axisId: fact.average_conversion_rate
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 411
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 108
       - id: fact.average_click_rate
         name: Click Through Rate
         axisId: fact.average_click_rate
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 416
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 113
       showLabels: true
       showValues: true
       unpinAxis: false
       tickDensity: default
       tickDensityCustom: 5
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 408
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+      __LINE_NUM: 105
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -145,9 +145,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 0
     col: 0
     width: 14
@@ -182,11 +182,15 @@
       - id: fact.average_cost_per_impression
         name: Keyword This Period CPM
         axisId: fact.average_cost_per_impression
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 182
       showLabels: false
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+      __LINE_NUM: 179
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -208,9 +212,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 0
     col: 14
     width: 10
@@ -256,11 +260,15 @@
       - id: fact.average_cost_per_impression
         name: Fact CPM
         axisId: fact.average_cost_per_impression
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 256
       showLabels: false
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+      __LINE_NUM: 253
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -330,11 +338,15 @@
       - id: fact.average_cost_per_impression
         name: CPM
         axisId: fact.average_cost_per_impression
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 330
       showLabels: false
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+      __LINE_NUM: 327
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -369,10 +381,10 @@
     explore: bing_keyword_date_fact
     type: looker_bar
     fields:
-    - fact.bid_strategy_type
+    - keyword.bid_strategy_type
     - fact.average_cost_per_impression
     sorts:
-    - fact.bid_strategy_type
+    - keyword.bid_strategy_type
     limit: 500
     stacking: ''
     colors:
@@ -404,11 +416,15 @@
       - id: fact.average_cost_per_impression
         name: Keyword This Period CPM
         axisId: fact.average_cost_per_impression
+        __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+        __LINE_NUM: 404
       showLabels: false
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
+      __FILE: app-marketing-bing-ads/bi_campaign_metrics_cpm.dashboard.lookml
+      __LINE_NUM: 401
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -430,9 +446,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 11
     col: 16
     width: 8
@@ -443,9 +459,9 @@
     explore: bing_ad_date_fact
     type: looker_bar
     fields:
-    - fact.ad_title
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad.title
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     - last_fact.total_impressions_period_delta
     - last_fact.average_cost_per_impression
     - fact.average_cost_per_impression
@@ -488,23 +504,17 @@
     - label: ''
       orientation: bottom
       series:
-      - id: last_fact.total_conversions
+      - id: last_fact.average_cost_per_impression
         name: Ad Last Period
-        axisId: last_fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 511
-      - id: fact.total_conversions
+        axisId: last_fact.average_cost_per_impression
+      - id: fact.average_cost_per_impression
         name: Ad This Period
-        axisId: fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 514
+        axisId: fact.average_cost_per_impression
       showLabels: true
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 508
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -534,15 +544,15 @@
     hidden_fields:
     - campaign.name
     - ad_group.ad_group_name
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     - last_fact.total_impressions_period_delta
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 0
     width: 12
@@ -553,14 +563,16 @@
     explore: bing_keyword_date_fact
     type: looker_bar
     fields:
-    - fact.ad_group_name
-    - fact.campaign_name
-    - fact.final_url
+    - ad_group.ad_group_name
+    - campaign.campaign_name
+    - keyword.final_url
     - fact.total_impressions_period_delta
     - last_fact.average_cost_per_impression
     - fact.average_cost_per_impression
     filters:
       fact.total_conversions_period_delta_abs: ">0"
+    sorts:
+    - fact.total_impressions_period_delta desc
     limit: 50
     column_limit: 50
     stacking: ''
@@ -595,23 +607,17 @@
     - label: ''
       orientation: bottom
       series:
-      - id: last_fact.total_conversions
+      - id: last_fact.average_cost_per_impression
         name: Keyword Prior Period
-        axisId: last_fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 618
-      - id: fact.total_conversions
+        axisId: last_fact.average_cost_per_impression
+      - id: fact.average_cost_per_impression
         name: Keyword This Period
-        axisId: fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 621
+        axisId: fact.average_cost_per_impression
       showLabels: true
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 615
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -641,15 +647,15 @@
     hidden_fields:
     - campaign.name
     - ad_group.ad_group_name
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     - fact.total_impressions_period_delta
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 23
     col: 0
     width: 12
@@ -660,15 +666,15 @@
     explore: bing_ad_group_date_fact
     type: looker_bar
     fields:
-    - fact.campaign_name
-    - fact.ad_group_name
+    - campaign.campaign_name
+    - ad_group.ad_group_name
     - fact.total_impressions_period_delta
     - last_fact.average_cost_per_impression
     - fact.average_cost_per_impression
     filters:
       fact.total_conversions_period_delta_abs: ">0"
     sorts:
-    - fact.total_conversions_period_delta_abs desc
+    - fact.total_impressions_period_delta desc
     limit: 50
     column_limit: 50
     stacking: ''
@@ -703,23 +709,14 @@
     - label: ''
       orientation: bottom
       series:
-      - id: fact.total_conversions
-        name: Ad Group This Period
-        axisId: fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 724
-      - id: last_fact.total_conversions
+      - id: last_fact.average_cost_per_impression
         name: Ad Group Last Period
-        axisId: last_fact.total_conversions
-        __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-        __LINE_NUM: 727
+        axisId: last_fact.average_cost_per_impression
       showLabels: true
       showValues: false
       unpinAxis: false
       tickDensity: default
       type: linear
-      __FILE: 5f71074d49e24011ceee3a8ee7cf1e94204e168ec2ae952a99799d53b6dd2d4636e6db93/bi_campaign_metrics_conversions.dashboard.lookml
-      __LINE_NUM: 721
     y_axis_combined: true
     show_y_axis_labels: true
     show_y_axis_ticks: true
@@ -748,15 +745,14 @@
     conditional_formatting_include_nulls: false
     hidden_fields:
     - campaign.name
-    - ad_group.ad_group_name
-    - fact.campaign_name
+    - campaign.campaign_name
     - fact.total_impressions_period_delta
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 12
     width: 12

@@ -145,9 +145,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 0
     col: 0
     width: 14
@@ -158,9 +158,9 @@
     explore: bing_ad_date_fact
     type: looker_bar
     fields:
-    - fact.ad_title
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad.title
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     - last_fact.total_clicks_period_delta
     - last_fact.total_clicks
     - fact.total_clicks
@@ -249,15 +249,15 @@
     hidden_fields:
     - campaign.name
     - ad_group.ad_group_name
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     - last_fact.total_clicks_period_delta
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 0
     width: 12
@@ -268,9 +268,9 @@
     explore: bing_keyword_date_fact
     type: looker_bar
     fields:
-    - fact.ad_group_name
-    - fact.campaign_name
-    - fact.final_url
+    - ad_group.ad_group_name
+    - campaign.campaign_name
+    - keyword.final_url
     - last_fact.total_clicks_period_delta
     - last_fact.total_clicks
     - fact.total_clicks
@@ -358,15 +358,15 @@
     hidden_fields:
     - campaign.name
     - ad_group.ad_group_name
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     - last_fact.total_clicks_period_delta
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 23
     col: 0
     width: 12
@@ -377,8 +377,8 @@
     explore: bing_ad_group_date_fact
     type: looker_bar
     fields:
-    - fact.campaign_name
-    - fact.ad_group_name
+    - campaign.campaign_name
+    - ad_group.ad_group_name
     - last_fact.total_clicks_period_delta
     - last_fact.total_clicks
     - fact.total_clicks
@@ -465,15 +465,14 @@
     conditional_formatting_include_nulls: false
     hidden_fields:
     - campaign.name
-    - ad_group.ad_group_name
-    - fact.campaign_name
+    - campaign.campaign_name
     - last_fact.total_clicks_period_delta
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 12
     width: 12
@@ -534,9 +533,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 0
     col: 14
     width: 10
@@ -695,7 +694,7 @@
     explore: bing_keyword_date_fact
     type: looker_bar
     fields:
-    - fact.bid_strategy_type
+    - keyword.bid_strategy_type
     - fact.total_clicks
     sorts:
     - fact.total_clicks desc
@@ -756,9 +755,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 11
     col: 16
     width: 8

@@ -15,11 +15,11 @@ view: bing_ads_ad_impressions {
       column: channel { field: fact.network }
       column: device_type { field: fact.device_type }
       column: account_id { field: fact.account_id_string }
-      column: account_name { field: fact.account_name }
+      column: account_name { field: account.account_name }
       column: campaign_id { field: fact.campaign_id_string }
-      column: campaign_name { field: fact.campaign_name }
+      column: campaign_name { field: campaign.campaign_name }
       column: ad_group_id { field: fact.ad_group_id_string }
-      column: ad_group_name { field: fact.ad_group_name }
+      column: ad_group_name { field: ad_group.ad_group_name }
       column: cost { field: fact.total_cost }
       column: impressions { field: fact.total_impressions }
       column: clicks { field: fact.total_clicks }

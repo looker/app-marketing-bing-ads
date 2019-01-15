@@ -63,9 +63,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 0
     col: 14
     width: 10
@@ -155,7 +155,7 @@
     explore: bing_keyword_date_fact
     type: looker_bar
     fields:
-    - fact.bid_strategy_type
+    - keyword.bid_strategy_type
     - fact.total_conversions
     sorts:
     - fact.total_conversions desc
@@ -221,9 +221,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 11
     col: 16
     width: 8
@@ -448,9 +448,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 0
     col: 0
     width: 14
@@ -461,9 +461,9 @@
     explore: bing_ad_date_fact
     type: looker_bar
     fields:
-    - fact.ad_title
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad.title
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     - fact.total_cost
     - last_fact.total_conversions
     - fact.total_conversions
@@ -551,14 +551,14 @@
     - fact.total_cost
     - last_fact.total_cost
     - fact.total_conversions_period_delta
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 0
     width: 12
@@ -569,14 +569,14 @@
     explore: bing_keyword_date_fact
     type: looker_bar
     fields:
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     - fact.total_cost
     - last_fact.total_conversions
     - fact.total_conversions
     - last_fact.total_cost
     - fact.total_conversions_period_delta
-    - fact.final_url
+    - keyword.final_url
     filters:
       fact.total_conversions_period_delta_abs: ">0"
     sorts:
@@ -658,14 +658,14 @@
     - fact.total_cost
     - last_fact.total_cost
     - fact.total_conversions_period_delta
-    - fact.ad_group_name
-    - fact.campaign_name
+    - ad_group.ad_group_name
+    - campaign.campaign_name
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 23
     col: 0
     width: 12
@@ -676,8 +676,8 @@
     explore: bing_ad_group_date_fact
     type: looker_bar
     fields:
-    - fact.campaign_name
-    - fact.ad_group_name
+    - campaign.campaign_name
+    - ad_group.ad_group_name
     - fact.total_cost
     - fact.total_conversions
     - last_fact.total_conversions
@@ -760,17 +760,16 @@
     conditional_formatting_include_nulls: false
     hidden_fields:
     - campaign.name
-    - ad_group.ad_group_name
     - fact.total_cost
     - last_fact.total_cost
     - fact.total_conversions_period_delta
-    - fact.campaign_name
+    - campaign.campaign_name
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 17
     col: 12
     width: 12
