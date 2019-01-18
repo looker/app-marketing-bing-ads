@@ -35,7 +35,13 @@ view: bing_keyword_key_base {
 
   dimension: ad_key_base {
     hidden: yes
-    sql: CONCAT(${ad_group_key_base}, "-", CAST(${keyword_id} as STRING)) ;;
+    sql:  {% if _dialect._name == 'snowflake' %}
+        ${ad_group_key_base} || '-' || TO_CHAR(${keyword_id})
+      {% elsif _dialect._name == 'redshift' %}
+        ${ad_group_key_base} || '-' || CAST(${keyword_id} AS VARCHAR)
+      {% else %}
+        CONCAT(${ad_group_key_base}, "-", CAST(${keyword_id} as STRING))
+      {% endif %} ;;
   }
   dimension: key_base {
     sql: ${ad_key_base} ;;
