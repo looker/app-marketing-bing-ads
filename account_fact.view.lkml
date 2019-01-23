@@ -37,7 +37,13 @@ view: bing_account_key_base {
 
   dimension: account_key_base {
     hidden: yes
-    sql: CAST(${account_id} AS STRING) ;;
+    sql: {% if _dialect._name == 'snowflake' %}
+        TO_CHAR(${account_id})
+      {% elsif _dialect._name == 'redshift' %}
+        CAST(${account_id} AS VARCHAR)
+      {% else %}
+        CAST(${account_id} AS STRING)
+      {% endif %} ;;
   }
   dimension: key_base {
     hidden: yes
