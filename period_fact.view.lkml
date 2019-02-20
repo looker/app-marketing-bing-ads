@@ -9,6 +9,47 @@ explore: bing_period_fact {
   label: "Bing Period Comparison"
   view_label: "This Period"
 
+  join: account {
+    from: bing_account
+    view_label: "Account"
+    type: left_outer
+    sql_on: ${fact.account_id} = ${account.account_id} ;;
+    relationship: many_to_one
+  }
+
+  join: campaign {
+    from: bing_campaign
+    view_label: "Campaign"
+    type: left_outer
+    sql_on: ${fact.campaign_id} = ${campaign.campaign_id} ;;
+    relationship: many_to_one
+  }
+
+  join: ad_group {
+    from: bing_ad_group
+    view_label: "Ad Group"
+    type: left_outer
+    sql_on: ${fact.ad_group_id} = ${ad_group.ad_group_id} ;;
+    relationship: many_to_one
+  }
+
+  join: ad {
+    from: bing_ad
+    view_label: "Ad"
+    type: left_outer
+    sql_on: ${fact.ad_id} = ${ad.ad_id} ;;
+    relationship: many_to_one
+  }
+
+  join: keyword {
+    from: bing_keyword
+    view_label: "Keyword"
+    type: left_outer
+    sql_on: ${fact.keyword_id} = ${keyword.keyword_id} ;;
+    relationship: many_to_one
+  }
+
+
   join: last_fact {
     from: bing_period_fact
     view_label: "Prior Period"
@@ -52,7 +93,7 @@ explore: bing_period_fact {
   }
   join: last_total {
     from: bing_date_fact
-    view_label: "Total This Period"
+    view_label: "Total Last Period"
     sql_on: ${fact.date_last_period} = ${total.date_period} ;;
     relationship: many_to_one
   }
@@ -96,9 +137,9 @@ view: bing_period_fact {
   dimension: key_base {
     hidden: yes
     sql:
-      {% if _dialect._name == 'snowflake' %}
+     {% if _dialect._name == 'snowflake' %}
         TO_CHAR(${account_id})
-          {% if (campaign._in_query or fact.campaign_id._in_query or ad_group._in_query or fact.ad_group_id._in_query or ad._in_query or fact.ad_id._in_query or keyword._in_query or fact.keyword_id._in_query) %}
+          {% if ( campaign._in_query or fact.campaign_id._in_query or ad_group._in_query or fact.ad_group_id._in_query or ad._in_query or fact.ad_id._in_query or keyword._in_query or fact.keyword_id._in_query %}
             || '-' || TO_CHAR(${campaign_id})
           {% endif %}
           {% if (ad_group._in_query or fact.ad_group_id._in_query or ad._in_query or fact.ad_id._in_query or keyword._in_query or fact.keyword_id._in_query) %}
@@ -111,7 +152,7 @@ view: bing_period_fact {
           {% endif %}
       {% elsif _dialect._name == 'redshift' %}
         CAST(${account_id} AS VARCHAR)
-          {% if (campaign._in_query or fact.campaign_id._in_query or ad_group._in_query or fact.ad_group_id._in_query or ad._in_query or fact.ad_id._in_query or keyword._in_query or fact.keyword_id._in_query) %}
+          {% if ( campaign._in_query or fact.campaign_id._in_query or ad_group._in_query or fact.ad_group_id._in_query or ad._in_query or fact.ad_id._in_query or keyword._in_query or fact.keyword_id._in_query) %}
             || '-' || CAST(${campaign_id} AS VARCHAR)
           {% endif %}
           {% if (ad_group._in_query or fact.ad_group_id._in_query or ad._in_query or fact.ad_id._in_query or keyword._in_query or fact.keyword_id._in_query) %}
@@ -137,7 +178,7 @@ view: bing_period_fact {
             ,"-", CAST(${keyword_id} AS STRING)
           {% endif %}
         )
-          {% endif %};;
+        {% endif %};;
   }
   dimension: primary_key {
     primary_key: yes
