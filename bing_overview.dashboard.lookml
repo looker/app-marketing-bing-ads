@@ -899,7 +899,7 @@
     explore: bing_ad_group_date_fact
     type: table
     fields:
-    - 
+    - fact.weighted_average_position
     - fact.total_cost
     - campaign.campaign_name
     - fact.total_conversions
