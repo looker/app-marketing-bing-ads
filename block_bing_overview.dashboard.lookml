@@ -1,10 +1,17 @@
-- dashboard: bing_overview
-  title: Bing Overview
-  extends: bing_ads_base
+- dashboard: block_bing_overview
+  title: Block - Bing Overview
+  layout: newspaper
+  embed_style:
+    background_color: "#ffffff"
+    show_title: false
+    title_color: "#3a4245"
+    show_filters_bar: false
+    tile_text_color: "#3a4245"
+    text_tile_text_color: ''
   elements:
   - title: Spend
     name: Spend
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: single_value
     fields:
@@ -107,7 +114,7 @@
     height: 3
   - title: Cost Per Conversion
     name: Cost Per Conversion
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: single_value
     fields:
@@ -212,7 +219,7 @@
     height: 3
   - title: Conversions
     name: Conversions
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: single_value
     fields:
@@ -315,7 +322,7 @@
     height: 3
   - title: Conversion Rate
     name: Conversion Rate
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: single_value
     fields:
@@ -420,7 +427,7 @@
     height: 3
   - title: Conversion Trends
     name: Conversion Trends
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: looker_line
     fields:
@@ -527,7 +534,7 @@
     height: 10
   - title: Spend To Date
     name: Spend To Date
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: looker_area
     fields:
@@ -597,7 +604,7 @@
     height: 10
   - title: Funnel
     name: Funnel
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: looker_column
     fields:
@@ -681,7 +688,7 @@
     height: 6
   - title: Click Rate
     name: Click Rate
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: single_value
     fields:
@@ -786,7 +793,7 @@
     height: 3
   - title: Click Trend
     name: Click Trend
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: looker_line
     fields:
@@ -895,11 +902,10 @@
     height: 6
   - title: Campaigns
     name: Campaigns
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: table
     fields:
-    - 
     - fact.total_cost
     - campaign.campaign_name
     - fact.total_conversions
@@ -992,7 +998,7 @@
     height: 6
   - title: Cost Per Click
     name: Cost Per Click
-    model: marketing_analytics
+    model: bing_ads
     explore: bing_ad_group_date_fact
     type: single_value
     fields:
@@ -1095,3 +1101,63 @@
     col: 9
     width: 4
     height: 3
+  filters:
+  - name: Period
+    title: Period
+    type: field_filter
+    default_value: 28 day
+    allow_multiple_values: false
+    required: true
+    model: bing_ads
+    explore: bing_ads_ad_impressions
+    listens_to_filters: []
+    field: fact.period
+  - name: Period Latest
+    title: Period Latest
+    type: field_filter
+    default_value: 'Yes'
+    allow_multiple_values: false
+    required: true
+    model: bing_ads
+    explore: bing_ads_ad_impressions
+    listens_to_filters: []
+    field: fact.date_period_latest
+  - name: Campaign
+    title: Campaign
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    model: bing_ads
+    explore: bing_ads_ad_impressions
+    listens_to_filters:
+    - Period
+    - Period Latest
+    - Account
+    field: fact.campaign_name
+  - name: Account
+    title: Account
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    model: bing_ads
+    explore: bing_ads_ad_impressions
+    listens_to_filters:
+    - Period
+    - Period Latest
+    field: fact.account_name
+  - name: Ad Group
+    title: Ad Group
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    model: bing_ads
+    explore: bing_ads_ad_impressions
+    listens_to_filters:
+    - Period
+    - Period Latest
+    - Campaign
+    - Account
+    field: fact.ad_group_name
