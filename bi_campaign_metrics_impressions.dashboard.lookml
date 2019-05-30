@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_impressions
-  title: Bing Campaign Metrics - Impressions
+  title: Bing Ads - Impressions
   extends: bing_ads_base
   elements:
   - title: Impressions To Date

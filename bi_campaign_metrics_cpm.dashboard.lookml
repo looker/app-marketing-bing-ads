@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_cost_per_impression
-  title: Bing Campaign Metrics - Cost Per Impression
+  title: Bing Ads - Cost Per Impression
   extends: bing_ads_base
   elements:
   - title: Cost Per Impressions To Date

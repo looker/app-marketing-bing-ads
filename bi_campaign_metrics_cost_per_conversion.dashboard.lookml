@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_cost_per_conversion
-  title: Bing Campaign Metrics - Cost Per Conversion
+  title: Bing Ads - Cost Per Conversion
   extends: bing_ads_base
   elements:
   - title: Cost Per Conversion By Day Of Week

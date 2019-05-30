@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_conversions
-  title: Bing Campaign Metrics - Conversions
+  title: Bing Ads - Conversions
   extends: bing_ads_base
   elements:
   - title: Conversions By Day Of Week

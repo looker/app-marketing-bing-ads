@@ -1,5 +1,5 @@
 - dashboard: bing_overview
-  title: Bing Overview
+  title: Bing Ads Overview
   extends: bing_ads_base
   elements:
   - title: Spend

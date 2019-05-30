@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_roas
-  title: Bing Campaign Metrics - ROAS
+  title: Bing Ads - ROAS
   extends: bing_ads_base
   elements:
   - title: Return On Ad Spend To Date
