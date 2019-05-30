@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_click_through_rate
-  title: Bing Campaign Metrics - Click Through Rate
+  title: Bing Ads - Click Through Rate
   extends: bing_ads_base
   elements:
   - title: Click Through Rate By Day Of Week

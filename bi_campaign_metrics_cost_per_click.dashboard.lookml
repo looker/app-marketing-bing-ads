@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_cost_per_click
-  title: Bing Campaign Metrics - Cost Per Click
+  title: Bing Ads - Cost Per Click
   extends: bing_ads_base
   elements:
   - title: Cost Per Click By Day Of Week

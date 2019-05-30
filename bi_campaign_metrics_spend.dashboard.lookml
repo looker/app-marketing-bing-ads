@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_spend
-  title: Bing Campaign Metrics - Spend
+  title: Bing Ads - Spend
   extends: bing_ads_base
   elements:
   - title: Spend To Date

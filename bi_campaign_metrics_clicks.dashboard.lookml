@@ -1,5 +1,5 @@
 - dashboard: bing_campaign_metrics_clicks
-  title: Bing Campaign Metrics - Clicks
+  title: Bing Ads - Clicks
   extends: bing_ads_base
   elements:
   - title: Clicks To Date
