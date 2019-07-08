@@ -50,11 +50,11 @@ view: bing_ads_ad_impressions {
     hidden: yes
     sql:
       {% if _dialect._name == 'snowflake' %}
-        ${channel} || '-' || TO_CHAR(${account_id})  || '-' || TO_CHAR(${campaign_id}) || '-' || TO_CHAR(${ad_group_id}) || '-' || ${channel}
+        ${channel} || '-' || TO_CHAR(${account_id})  || '-' || TO_CHAR(${campaign_id}) || '-' || TO_CHAR(${ad_group_id}) || '-' || ${device_type}
       {% elsif _dialect._name == 'redshift' %}
-        ${channel} || '-' ||  CAST(${account_id} AS VARCHAR)  || '-' || CAST(${campaign_id} AS VARCHAR) || '-' || CAST(${ad_group_id} AS VARCHAR) || '-' || ${channel}
+        ${channel} || '-' ||  CAST(${account_id} AS VARCHAR)  || '-' || CAST(${campaign_id} AS VARCHAR) || '-' || CAST(${ad_group_id} AS VARCHAR) || '-' || ${device_type}
       {% else %}
-        concat(${channel}, ${account_id}, ${campaign_id}, ${ad_group_id}, ${channel})
+        concat(${channel}, ${account_id}, ${campaign_id}, ${ad_group_id}, ${device_type})
       {% endif %}  ;;
   }
   dimension: key_base {
