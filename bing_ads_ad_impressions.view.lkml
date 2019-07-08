@@ -13,7 +13,7 @@ view: bing_ads_ad_impressions {
     explore_source: bing_ad_impressions_ad_group {
       column: _date { field: fact.date_date }
       column: channel { field: fact.network }
-      column: device_type { field: fact.device_type }
+      #column: device_type { field: fact.device_type }
       column: account_id { field: fact.account_id_string }
       column: account_name { field: account.account_name }
       column: campaign_id { field: fact.campaign_id_string }
@@ -33,7 +33,7 @@ view: bing_ads_ad_impressions {
     type: date_raw
   }
   dimension: channel {}
-  dimension: device_type {}
+  #dimension: device_type {}
   dimension: account_id {
     hidden: yes
   }
@@ -50,11 +50,11 @@ view: bing_ads_ad_impressions {
     hidden: yes
     sql:
       {% if _dialect._name == 'snowflake' %}
-        ${channel} || '-' || TO_CHAR(${account_id})  || '-' || TO_CHAR(${campaign_id}) || '-' || TO_CHAR(${ad_group_id}) || '-' || ${device_type}
+        ${channel} || '-' || TO_CHAR(${account_id})  || '-' || TO_CHAR(${campaign_id}) || '-' || TO_CHAR(${ad_group_id})
       {% elsif _dialect._name == 'redshift' %}
-        ${channel} || '-' ||  CAST(${account_id} AS VARCHAR)  || '-' || CAST(${campaign_id} AS VARCHAR) || '-' || CAST(${ad_group_id} AS VARCHAR) || '-' || ${device_type}
+        ${channel} || '-' ||  CAST(${account_id} AS VARCHAR)  || '-' || CAST(${campaign_id} AS VARCHAR) || '-' || CAST(${ad_group_id} AS VARCHAR)
       {% else %}
-        concat(${channel}, ${account_id}, ${campaign_id}, ${ad_group_id}, ${device_type})
+        concat(${channel}, ${account_id}, ${campaign_id}, ${ad_group_id})
       {% endif %}  ;;
   }
   dimension: key_base {
