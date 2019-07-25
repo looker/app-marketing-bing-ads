@@ -4,6 +4,7 @@ view: bing_ad_metrics_base_template {
 
   dimension: average_position {
     type: number
+    hidden:  yes
     sql: ${TABLE}.average_position ;;
   }
 

@@ -292,7 +292,7 @@
   - title: Return On Ad Spend By Device
     name: Return On Ad Spend By Device
     model: marketing_analytics
-    explore: bing_ads_ad_impressions
+    explore: bing_ad_date_fact
     type: looker_bar
     fields:
     - fact.device_type
@@ -356,9 +356,9 @@
     listen:
       Period: fact.period
       Period Latest: fact.date_period_latest
-      Campaign: fact.campaign_name
-      Account: fact.account_name
-      Ad Group: fact.ad_group_name
+      Campaign: campaign.campaign_name
+      Account: account.account_name
+      Ad Group: ad_group.ad_group_name
     row: 11
     col: 8
     width: 8
