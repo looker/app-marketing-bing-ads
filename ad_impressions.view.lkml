@@ -9,6 +9,7 @@ explore: bing_ad_impressions_template {
   extends: [bing_ad_impressions_adapter]
   from: bing_ad_impressions
   view_name: fact
+  extension: required
   group_label: "Bing Ads"
   label: "Bing Ads Impressions"
   view_label: "Impressions"
@@ -24,6 +25,7 @@ explore: bing_ad_impressions_campaign_template {
   from: bing_ad_impressions_campaign
   view_name: fact
   group_label: "Bing Ads"
+  extension: required
   label: "Bing Ads Impressions by Campaign"
   view_label: "Impressions by Campaign"
 }
@@ -37,6 +39,7 @@ explore: bing_ad_impressions_ad_group_template {
   extends: [bing_ad_impressions_ad_group_adapter]
   from: bing_ad_impressions_ad_group
   view_name: fact
+  extension: required
   group_label: "Bing Ads"
   label: "Bing Ads Impressions by Ad Group"
   view_label: "Impressions by Ad Group"
@@ -51,6 +54,7 @@ explore: bing_ad_impressions_keyword_template {
   extends: [bing_ad_impressions_keyword_adapter]
   from: bing_ad_impressions_keyword
   view_name: fact
+  extension: required
   group_label: "Bing Ads"
   label: "Bing Ads Impressions by Keyword"
   view_label: "Impressions by Keyword"
@@ -65,6 +69,7 @@ explore: bing_ad_impressions_ad_template {
   extends: [bing_ad_impressions_ad_adapter]
   from: bing_ad_impressions_ad
   view_name: fact
+  extension: required
   group_label: "Bing Ads"
   label: "Bing Ads Impressions by Ad"
   view_label: "Impressions by Ad"
